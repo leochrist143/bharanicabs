@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bharani Cabs - Explore</title>
+    <link rel="shortcut icon" href="./bc-logo.svg" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { primary: "#FFCB05", secondary: "#222222" },
+                    borderRadius: {
+                        none: "0px",
+                        sm: "4px",
+                        DEFAULT: "8px",
+                        md: "12px",
+                        lg: "16px",
+                        xl: "20px",
+                        "2xl": "24px",
+                        "3xl": "32px",
+                        full: "9999px",
+                        button: "8px",
+                    },
+                },
+            },
+        };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" />
+    <style>
+        html {
+            scroll-behavior: smooth !important;
+        }
+
+        .slide-indicator {
+            transition: background-color 0.3s ease;
+        }
+
+        #tariff-slides {
+            display: flex;
+            width: 50%;
+            margin-bottom: 1rem;
+            /* 6 slides */
+        }
+
+        @media (max-width: 640px) {
+            #tariff-slides {
+                display: flex;
+                width: 100%;
+                /* 6 slides */
+            }
+        }
+
+        .min-w-full {
+            min-width: 100%;
+        }
+    </style>
+    <style>
+        :where([class^="ri-"])::before {
+            content: "\f3c2";
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background: #F8F9FA;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .logo {
+            font-family: 'Pacifico', serif;
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        section {
+            background: transparent;
+        }
+
+        .bg-white {
+            background: #FFFFFF;
+        }
+
+        .gif-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .gif-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Nav Bar -->
+    <nav class="bg-white fixed w-full z-50 top-0 start-0 border-b border-gray-200">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="#0" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <div class="logo text-2xl font-bold text-[#ffcb05]">Bharani Cabs</div>
+            </a>
+            <div class="flex lg:order-2 space-x-3 lg:space-x-0 rtl:space-x-reverse">
+                <a href="tel:+91" target="_blank"
+                    class="flex gap-x-2 items-center text-white bg-[#ffcb05] hover:bg-[#c8a623] focus:ring-4 focus:outline-none focus:ring-[#ffcb0573] font-medium rounded-md text-sm px-4 py-2 text-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 25 25" fill="none">
+                        <path
+                            d="M24.2866 17.6656L18.8179 15.3218C18.5843 15.2223 18.3246 15.2013 18.078 15.262C17.8315 15.3228 17.6113 15.462 17.4507 15.6587L15.0288 18.6177C11.2279 16.8256 8.16904 13.7668 6.37695 9.96587L9.33594 7.54399C9.53305 7.38368 9.67256 7.16351 9.73335 6.91682C9.79414 6.67013 9.7729 6.41035 9.67285 6.1768L7.3291 0.708053C7.21929 0.4563 7.02508 0.250751 6.77996 0.126852C6.53483 0.00295173 6.25416 -0.0315334 5.98633 0.0293424L0.908203 1.20122C0.649985 1.26085 0.419602 1.40624 0.254656 1.61366C0.0897096 1.82109 -5.94829e-05 2.07829 2.95713e-08 2.34331C2.95713e-08 14.8677 10.1514 24.9996 22.6562 24.9996C22.9213 24.9997 23.1787 24.91 23.3862 24.7451C23.5937 24.5801 23.7392 24.3497 23.7988 24.0914L24.9707 19.0132C25.0312 18.7441 24.996 18.4623 24.8711 18.2163C24.7463 17.9704 24.5396 17.7756 24.2866 17.6656Z"
+                            fill="white" />
+                    </svg>
+                    Call Us
+                </a>
+                <button data-collapse-toggle="navbar-sticky" type="button"
+                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+                    aria-controls="navbar-sticky" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
+                </button>
+            </div>
+            <div class="items-center justify-between hidden w-full lg:flex lg:w-auto lg:order-1 transition-all duration-300 ease-in-out"
+                id="navbar-sticky">
+                <ul
+                    class="flex flex-col p-4 lg:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 lg:space-x-8 rtl:space-x-reverse lg:flex-row lg:mt-0 lg:border-0 lg:bg-white">
+                    <li>
+                        <a href="#"
+                            class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-[#ffcb05] lg:p-0">Home</a>
+                    </li>
+                    <li>
+                        <a href="#about"
+                            class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-[#ffcb05] lg:p-0">About
+                            Us</a>
+                    </li>
+                    <li>
+                        <a href="#services"
+                            class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-[#ffcb05] lg:p-0">Our
+                            Services</a>
+                    </li>
+                    <li>
+                        <a href="./explore.html"
+                            class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-[#ffcb05] lg:p-0">Explore</a>
+                    </li>
+                    <li>
+                        <a href="#tariff"
+                            class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-[#ffcb05] lg:p-0">Tariff</a>
+                    </li>
+                    <li>
+                        <a href="#gallery"
+                            class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-[#ffcb05] lg:p-0">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="#customerRe"
+                            class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-[#ffcb05] lg:p-0">Reviews</a>
+                    </li>
+                    <li>
+                        <a href="#contact"
+                            class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-[#ffcb05] lg:p-0">Contact
+                            Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="flex flex-col gap-y-4 items-center fixed bottom-4 right-4 z-40">
+        <!-- WhatsApp Float Button -->
+        <a href="https://wa.me/9488477121" target="_blank">
+            <img src="./whatsapp-icon.svg" class="h-14 w-fit" alt="whatsapp-icon">
+        </a>
+        <!-- Scroll Up Float Button -->
+        <a href="#" class="w-12 h-12 flex items-center justify-center bg-primary rounded-full shadow-lg cursor-pointer">
+            <i class="ri-arrow-up-s-line ri-xl text-secondary"></i>
+        </a>
+    </div>
+
+</body>
+
+</html>
