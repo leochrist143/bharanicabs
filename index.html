@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bharani Cabs - Ride Safe. Ride Smart.</title>
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { primary: "#FFCB05", secondary: "#222222" },
+          borderRadius: {
+            none: "0px",
+            sm: "4px",
+            DEFAULT: "8px",
+            md: "12px",
+            lg: "16px",
+            xl: "20px",
+            "2xl": "24px",
+            "3xl": "32px",
+            full: "9999px",
+            button: "8px",
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" />
+  <style>
+    html { scroll-behavior: smooth !important; }
+    .slide-indicator {
+      transition: background-color 0.3s ease;
+    }
+
+    #tariff-slides {
+      display: flex;
+      width: 50%;
+      margin-bottom: 1rem;
+      /* 6 slides */
+    }
+
+    @media (max-width: 640px) {
+      #tariff-slides {
+        display: flex;
+        width: 100%;
+        /* 6 slides */
+      }
+    }
+
+    .min-w-full {
+      min-width: 100%;
+    }
+  </style>
+  <style>
+    :where([class^="ri-"])::before {
+      content: "\f3c2";
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: #F8F9FA;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .logo {
+      font-family: 'Pacifico', serif;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .hide-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    section {
+      background: transparent;
+    }
+
+    .bg-white {
+      background: #FFFFFF;
+    }
+
+    .gif-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .gif-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+
+<body class="bg-white text-gray-800">
+  <!-- Nav Bar -->
+  <nav class="bg-white fixed w-full z-50 top-0 start-0 border-b border-gray-200">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <a href="#0" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <div class="logo text-2xl font-bold text-[#ffcb05]">Bharani Cabs</div>
+      </a>
+      <div class="flex lg:order-2 space-x-3 lg:space-x-0 rtl:space-x-reverse">
+        <a href="https://wa.me/9488477121" target="_blank"
+          class="flex gap-x-2 items-center text-white bg-[#25D366] hover:bg-[#32a95e] focus:ring-4 focus:outline-none focus:ring-[#25d36680] font-medium rounded-md text-sm px-4 py-2 text-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="25D366">
+            <path
+              d="M10.126 20.2525C8.35379 20.2525 6.61518 19.7834 5.0757 18.8929L1.13045 20.2525L1.94089 16.0745C0.670061 14.3323 0 12.2836 0 10.126C0 4.54243 4.54243 0 10.126 0C15.7101 0 20.2525 4.54243 20.2525 10.126C20.2525 15.7099 15.7099 20.2525 10.126 20.2525ZM5.25756 17.2368L5.56277 17.4279C6.93787 18.2899 8.51615 18.7458 10.126 18.7458C14.8795 18.7458 18.7462 14.879 18.7462 10.126C18.7462 5.37328 14.8797 1.50674 10.126 1.50674C5.37328 1.50674 1.50674 5.3735 1.50674 10.126C1.50674 12.0598 2.14025 13.8921 3.33753 15.4244L3.54922 15.6951L3.1061 17.978L5.25756 17.2368Z"
+              fill="white" />
+            <path
+              d="M5.00855 6.23578C5.00855 6.23578 5.60304 5.19727 6.0872 5.13806C6.57158 5.07841 7.19522 5.07842 7.36319 5.39506C7.5316 5.71148 8.28306 7.55168 8.28306 7.55168C8.28306 7.55168 8.41201 7.8681 8.21422 8.17488C8.01643 8.48143 7.57129 8.92656 7.57129 8.92656C7.57129 8.92656 7.32394 9.24298 7.57129 9.57958C7.81864 9.91551 8.2021 10.534 8.99595 11.3267C9.78823 12.1201 11.3102 12.6857 11.3102 12.6857C11.3102 12.6857 11.528 12.7151 11.6668 12.5767C11.8049 12.4383 12.5571 11.4985 12.5571 11.4985C12.5571 11.4985 12.7983 11.1872 13.1995 11.37C13.6 11.553 15.336 12.4186 15.336 12.4186C15.336 12.4186 15.5391 12.4926 15.5391 12.7992C15.5391 13.1057 15.4151 13.856 15.1613 14.1097C14.9074 14.3638 14.1658 15.1457 13.0511 15.1457C11.9366 15.1457 9.2821 14.2386 7.86753 12.8243C6.45318 11.4095 5.19714 9.97494 4.90068 8.6698C4.60355 7.36354 4.64325 6.77353 5.00855 6.23578Z"
+              fill="white" />
+          </svg>
+          WhatsApp
+        </a>
+        <button data-collapse-toggle="navbar-sticky" type="button"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+          aria-controls="navbar-sticky" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15" />
+          </svg>
+        </button>
+      </div>
+      <div
+        class="items-center justify-between hidden w-full lg:flex lg:w-auto lg:order-1 transition-all duration-300 ease-in-out"
+        id="navbar-sticky">
+        <ul
+          class="flex flex-col p-4 lg:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 lg:space-x-8 rtl:space-x-reverse lg:flex-row lg:mt-0 lg:border-0 lg:bg-white">
+          <li>
+            <a href="#"
+              class="block py-2 px-3 text-white bg-[#ffcb05] rounded-sm lg:bg-transparent lg:text-[#ffcb05] lg:p-0"
+              aria-current="page">Home</a>
+          </li>
+          <li>
+            <a href="#about"
+              class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-[#ffcb05] lg:p-0">About
+              Us</a>
+          </li>
+          <li>
+            <a href="#services"
+              class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-[#ffcb05] lg:p-0">Our
+              Services</a>
+          </li>
+          <li>
+            <a href="#tariff"
+              class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-[#ffcb05] lg:p-0">Tariff</a>
+          </li>
+          <li>
+            <a href="#gallery"
+              class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-[#ffcb05] lg:p-0">Gallery</a>
+          </li>
+          <li>
+            <a href="#customerRe"
+              class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-[#ffcb05] lg:p-0">Reviews</a>
+          </li>
+          <li>
+            <a href="#contact"
+              class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-[#ffcb05] lg:p-0">Contact
+              Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Hero Section -->
+  <section class="relative h-[500px] pt-[4.5rem] overflow-hidden">
+    <div class="absolute inset-0 bg-black/40 z-10"></div>
+    <div class="gif-container absolute inset-0">
+      <img src="./banner.jpg" alt="Taxi in cityscape"
+        class="w-full h-full object-cover" />
+    </div>
+    <div class="relative z-20 flex flex-col items-center justify-center h-full px-6 text-center">
+      <h1 class="logo text-4xl font-bold text-white mb-3">Bharani Cabs</h1>
+      <p class="text-white text-xl font-medium mb-8">
+        Ride Safe. Ride Smart.
+      </p>
+      <button
+        class="openBookingBtn bg-primary text-secondary font-semibold px-8 py-3 !rounded-button shadow-lg hover:bg-primary/90 transition-all cursor-pointer">
+        Book Now
+      </button>
+
+      <!-- Booking Dialog -->
+      <div id="bookingDialog" class="fixed inset-0 bg-black/50 z-[60] hidden">
+        <div
+          class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] sm:w-[40%] max-h-[90vh] bg-white rounded-lg shadow-xl overflow-y-auto">
+          <div class="sticky top-0 bg-white px-4 py-3 border-b flex justify-between items-center">
+            <h3 class="text-lg font-semibold">Book Your Ride</h3>
+            <button id="closeDialog" class="w-8 h-8 flex items-center justify-center text-gray-500 hover:text-gray-700">
+              <i class="ri-close-line ri-lg"></i>
+            </button>
+          </div>
+
+          <form id="bookingForm" class="p-4 space-y-4">
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1">Pickup Location</label>
+              <input type="text" id="pickupLocation" required
+                class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-primary"
+                placeholder="Enter pickup address" />
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1">Destination</label>
+              <input type="text" id="destination" required
+                class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-primary"
+                placeholder="Enter destination address" />
+            </div>
+
+            <div class="grid grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">Date</label>
+                <input type="date" id="bookingDate" required
+                  class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-primary" />
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">Time</label>
+                <input type="time" id="bookingTime" required
+                  class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-primary" />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">Passengers</label>
+                <input type="number" id="passengers" required min="1" max="6"
+                  class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-primary"
+                  placeholder="Number of passengers" />
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">Vehicle Type</label>
+                <select id="vehicleType" required
+                  class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-primary">
+                  <option value="">Select vehicle</option>
+                  <option value="economy">Economy Sedan</option>
+                  <option value="premium">Premium SUV</option>
+                  <option value="luxury">Luxury Sedan</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1">Contact Number</label>
+              <input type="tel" id="contactNumber" required pattern="[0-9]{10}"
+                class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-primary"
+                placeholder="Enter your mobile number" />
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+              <input type="text" id="customerName" required
+                class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-primary"
+                placeholder="Enter your full name" />
+            </div>
+
+            <div class="pt-2">
+              <button type="submit" class="w-full bg-primary text-secondary font-semibold py-3 !rounded-button">
+                Confirm Booking
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- About Us Section -->
+  <section id="about" class="container mx-auto px-4 py-10">
+    <h2 class="text-2xl font-bold text-center mb-6">About Us</h2>
+    <p class="text-gray-700 text-center mb-4">
+      Founded in 2015, Bharani Cabs has been providing premium transportation
+      services in the city and beyond. Our mission is to offer safe, reliable,
+      and comfortable rides at competitive prices.
+    </p>
+    <p class="text-gray-700 text-center mb-6">
+      With a fleet of well-maintained vehicles and professional drivers, we
+      ensure that every journey with us is pleasant and hassle-free.
+    </p>
+    <div class="grid grid-cols-3 gap-3 mb-8">
+      <div class="bg-gray-50 p-3 rounded shadow-sm text-center">
+        <div class="w-12 h-12 mx-auto mb-2 bg-primary/10 rounded-full flex items-center justify-center">
+          <i class="ri-time-line ri-lg text-primary"></i>
+        </div>
+        <h3 class="text-sm font-semibold">10+ Years</h3>
+        <p class="text-xs text-gray-600">Experience</p>
+      </div>
+      <div class="bg-gray-50 p-3 rounded shadow-sm text-center">
+        <div class="w-12 h-12 mx-auto mb-2 bg-primary/10 rounded-full flex items-center justify-center">
+          <i class="ri-shield-check-line ri-lg text-primary"></i>
+        </div>
+        <h3 class="text-sm font-semibold">Safety First</h3>
+        <p class="text-xs text-gray-600">Verified Drivers</p>
+      </div>
+      <div class="bg-gray-50 p-3 rounded shadow-sm text-center">
+        <div class="w-12 h-12 mx-auto mb-2 bg-primary/10 rounded-full flex items-center justify-center">
+          <i class="ri-wallet-3-line ri-lg text-primary"></i>
+        </div>
+        <h3 class="text-sm font-semibold">Best Rates</h3>
+        <p class="text-xs text-gray-600">Transparent Pricing</p>
+      </div>
+    </div>
+    <div class="rounded-lg overflow-hidden shadow-md">
+      <img
+        src="https://readdy.ai/api/search-image?query=professional%20taxi%20fleet%20with%20well-maintained%20yellow%20and%20black%20cars%20lined%20up%2C%20professional%20drivers%20in%20uniform%20standing%20beside%20vehicles%2C%20bright%20daylight%2C%20clean%20modern%20vehicles%2C%20commercial%20photography%20style%2C%20realistic%20scene&width=375&height=200&seq=2&orientation=landscape"
+        alt="Our Fleet" class="w-full h-48 object-cover" />
+    </div>
+  </section>
+  <!-- Services Section -->
+  <section class="container mx-auto px-4 py-10 bg-gray-50" id="services">
+    <h2 class="text-2xl font-bold text-center mb-6">Our Services</h2>
+    <div class="grid grid-cols-5 gap-x-6 max-sm:grid-cols-1 max-lg:grid-cols-2 gap-y-6">
+      <div class="bg-white p-4 rounded shadow-sm">
+        <img
+          src="https://readdy.ai/api/search-image?query=icon%2C%203D%20cartoon%2C%20airport%20taxi%20service%2C%20the%20icon%20should%20take%20up%2070%25%20of%20the%20frame%2C%20vibrant%20colors%20with%20soft%20gradients%2C%20minimalist%20design%2C%20smooth%20rounded%20shapes%2C%20subtle%20shading%2C%20no%20outlines%2C%20centered%20composition%2C%20isolated%20on%20white%20background%2C%20playful%20and%20friendly%20aesthetic%2C%20isometric%20perspective%2C%20high%20detail%20quality%2C%20clean%20and%20modern%20look%2C%20single%20object%20focus&width=80&height=80&seq=3&orientation=squarish"
+          alt="Airport Transfer" class="w-20 h-20 mx-auto mb-2" />
+        <h3 class="text-sm font-semibold text-center">Airport Transfers</h3>
+        <p class="text-xs text-gray-600 text-center">
+          Punctual pickup and drop service
+        </p>
+      </div>
+      <div class="bg-white p-4 rounded shadow-sm">
+        <img
+          src="https://readdy.ai/api/search-image?query=icon%2C%203D%20cartoon%2C%20outstation%20trip%20car%20on%20highway%2C%20the%20icon%20should%20take%20up%2070%25%20of%20the%20frame%2C%20vibrant%20colors%20with%20soft%20gradients%2C%20minimalist%20design%2C%20smooth%20rounded%20shapes%2C%20subtle%20shading%2C%20no%20outlines%2C%20centered%20composition%2C%20isolated%20on%20white%20background%2C%20playful%20and%20friendly%20aesthetic%2C%20isometric%20perspective%2C%20high%20detail%20quality%2C%20clean%20and%20modern%20look%2C%20single%20object%20focus&width=80&height=80&seq=4&orientation=squarish"
+          alt="Outstation Trips" class="w-20 h-20 mx-auto mb-2" />
+        <h3 class="text-sm font-semibold text-center">Outstation Trips</h3>
+        <p class="text-xs text-gray-600 text-center">
+          Comfortable long-distance travel
+        </p>
+      </div>
+      <div class="bg-white p-4 rounded shadow-sm">
+        <img
+          src="https://readdy.ai/api/search-image?query=icon%2C%203D%20cartoon%2C%20city%20taxi%20ride%2C%20the%20icon%20should%20take%20up%2070%25%20of%20the%20frame%2C%20vibrant%20colors%20with%20soft%20gradients%2C%20minimalist%20design%2C%20smooth%20rounded%20shapes%2C%20subtle%20shading%2C%20no%20outlines%2C%20centered%20composition%2C%20isolated%20on%20white%20background%2C%20playful%20and%20friendly%20aesthetic%2C%20isometric%20perspective%2C%20high%20detail%20quality%2C%20clean%20and%20modern%20look%2C%20single%20object%20focus&width=80&height=80&seq=5&orientation=squarish"
+          alt="Local City Rides" class="w-20 h-20 mx-auto mb-2" />
+        <h3 class="text-sm font-semibold text-center">Local City Rides</h3>
+        <p class="text-xs text-gray-600 text-center">
+          Quick and convenient city travel
+        </p>
+      </div>
+      <div class="bg-white p-4 rounded shadow-sm">
+        <img
+          src="https://readdy.ai/api/search-image?query=icon%2C%203D%20cartoon%2C%20business%20people%20with%20taxi%2C%20the%20icon%20should%20take%20up%2070%25%20of%20the%20frame%2C%20vibrant%20colors%20with%20soft%20gradients%2C%20minimalist%20design%2C%20smooth%20rounded%20shapes%2C%20subtle%20shading%2C%20no%20outlines%2C%20centered%20composition%2C%20isolated%20on%20white%20background%2C%20playful%20and%20friendly%20aesthetic%2C%20isometric%20perspective%2C%20high%20detail%20quality%2C%20clean%20and%20modern%20look%2C%20single%20object%20focus&width=80&height=80&seq=6&orientation=squarish"
+          alt="Corporate Travel" class="w-20 h-20 mx-auto mb-2" />
+        <h3 class="text-sm font-semibold text-center">Corporate Travel</h3>
+        <p class="text-xs text-gray-600 text-center">
+          Business travel solutions
+        </p>
+      </div>
+      <div class="bg-white p-4 rounded shadow-sm max-sm:col-span-1 max-lg:col-span-2">
+        <img
+          src="https://readdy.ai/api/search-image?query=icon%2C%203D%20cartoon%2C%20tour%20package%20with%20car%20and%20luggage%2C%20the%20icon%20should%20take%20up%2070%25%20of%20the%20frame%2C%20vibrant%20colors%20with%20soft%20gradients%2C%20minimalist%20design%2C%20smooth%20rounded%20shapes%2C%20subtle%20shading%2C%20no%20outlines%2C%20centered%20composition%2C%20isolated%20on%20white%20background%2C%20playful%20and%20friendly%20aesthetic%2C%20isometric%20perspective%2C%20high%20detail%20quality%2C%20clean%20and%20modern%20look%2C%20single%20object%20focus&width=80&height=80&seq=7&orientation=squarish"
+          alt="Tour Packages" class="w-20 h-20 mx-auto mb-2" />
+        <h3 class="text-sm font-semibold text-center">Tour Packages</h3>
+        <p class="text-xs text-gray-600 text-center">
+          Customized tour plans with experienced guides
+        </p>
+      </div>
+    </div>
+  </section>
+  <!-- Tariff Section -->
+  <!-- <section class="px-4 py-10">
+      <h2 class="text-2xl font-bold text-center mb-6">Our Tariff</h2>
+      <div class="overflow-x-auto hide-scrollbar mb-6">
+        <div class="flex gap-4 w-max pb-4">
+          <div class="bg-white rounded shadow-md w-64 overflow-hidden">
+            <img
+              src="https://readdy.ai/api/search-image?query=professional%20photograph%20of%20a%20modern%20sedan%20taxi%20car%2C%20yellow%20and%20black%20color%20scheme%2C%20side%20view%2C%20isolated%20on%20white%20background%2C%20studio%20lighting%2C%20high%20detail%2C%20commercial%20product%20photography&width=240&height=140&seq=8&orientation=landscape"
+              alt="Sedan"
+              class="w-full h-36 object-cover"
+            />
+            <div class="p-4">
+              <h3 class="font-semibold mb-1">Economy Sedan</h3>
+              <p class="text-sm text-gray-700 mb-2">Up to 4 passengers</p>
+              <div class="flex justify-between mb-2">
+                <span class="text-xs text-gray-600">Base Fare:</span>
+                <span class="text-sm font-medium">₹150</span>
+              </div>
+              <div class="flex justify-between mb-3">
+                <span class="text-xs text-gray-600">Per KM:</span>
+                <span class="text-sm font-medium">₹12</span>
+              </div>
+              <button
+                class="w-full bg-primary text-secondary text-sm font-medium py-2 !rounded-button cursor-pointer"
+              >
+                Book Now
+              </button>
+            </div>
+          </div>
+          <div class="bg-white rounded shadow-md w-64 overflow-hidden">
+            <img
+              src="https://readdy.ai/api/search-image?query=professional%20photograph%20of%20a%20modern%20SUV%20taxi%20car%2C%20yellow%20and%20black%20color%20scheme%2C%20side%20view%2C%20isolated%20on%20white%20background%2C%20studio%20lighting%2C%20high%20detail%2C%20commercial%20product%20photography&width=240&height=140&seq=9&orientation=landscape"
+              alt="SUV"
+              class="w-full h-36 object-cover"
+            />
+            <div class="p-4">
+              <h3 class="font-semibold mb-1">Premium SUV</h3>
+              <p class="text-sm text-gray-700 mb-2">Up to 6 passengers</p>
+              <div class="flex justify-between mb-2">
+                <span class="text-xs text-gray-600">Base Fare:</span>
+                <span class="text-sm font-medium">₹250</span>
+              </div>
+              <div class="flex justify-between mb-3">
+                <span class="text-xs text-gray-600">Per KM:</span>
+                <span class="text-sm font-medium">₹18</span>
+              </div>
+              <button
+                class="w-full bg-primary text-secondary text-sm font-medium py-2 !rounded-button cursor-pointer"
+              >
+                Book Now
+              </button>
+            </div>
+          </div>
+          <div class="bg-white rounded shadow-md w-64 overflow-hidden">
+            <img
+              src="https://readdy.ai/api/search-image?query=professional%20photograph%20of%20a%20modern%20luxury%20taxi%20car%2C%20yellow%20and%20black%20color%20scheme%2C%20side%20view%2C%20isolated%20on%20white%20background%2C%20studio%20lighting%2C%20high%20detail%2C%20commercial%20product%20photography&width=240&height=140&seq=10&orientation=landscape"
+              alt="Luxury"
+              class="w-full h-36 object-cover"
+            />
+            <div class="p-4">
+              <h3 class="font-semibold mb-1">Luxury Sedan</h3>
+              <p class="text-sm text-gray-700 mb-2">Up to 4 passengers</p>
+              <div class="flex justify-between mb-2">
+                <span class="text-xs text-gray-600">Base Fare:</span>
+                <span class="text-sm font-medium">₹350</span>
+              </div>
+              <div class="flex justify-between mb-3">
+                <span class="text-xs text-gray-600">Per KM:</span>
+                <span class="text-sm font-medium">₹22</span>
+              </div>
+              <button
+                class="w-full bg-primary text-secondary text-sm font-medium py-2 !rounded-button cursor-pointer"
+              >
+                Book Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white rounded shadow-md p-4">
+        <h3 class="font-semibold mb-3 text-center">Additional Charges</h3>
+        <div class="space-y-2 text-sm">
+          <div class="flex justify-between">
+            <span>Night Charges (10 PM - 6 AM)</span>
+            <span class="font-medium">+10%</span>
+          </div>
+          <div class="flex justify-between">
+            <span>Waiting Charges (per hour)</span>
+            <span class="font-medium">₹100</span>
+          </div>
+          <div class="flex justify-between">
+            <span>Outstation Driver Allowance (per day)</span>
+            <span class="font-medium">₹300</span>
+          </div>
+        </div>
+        <div class="mt-4 text-center">
+          <button
+            class="bg-primary/10 text-secondary font-medium px-4 py-2 !rounded-button cursor-pointer"
+          >
+            Request Detailed Quote
+          </button>
+        </div>
+      </div>
+    </section> -->
+
+  <section class="px-4 py-10" id="tariff">
+    <h2 class="text-2xl font-bold text-center mb-6">Our Tariff</h2>
+
+    <!-- Slideshow Container -->
+    <div class="relative max-w-4xl mx-auto mb-6">
+      <!-- Slides -->
+      <div class="overflow-hidden">
+        <div id="tariff-slides" class="flex transition-transform duration-300 ease-in-out">
+          <!-- Slide 1 - Economy Sedan -->
+          <div class="min-w-full px-2">
+            <div class="bg-white rounded shadow-md w-full max-w-md mx-auto overflow-hidden">
+              <img
+                src="https://readdy.ai/api/search-image?query=professional%20photograph%20of%20a%20modern%20sedan%20taxi%20car%2C%20yellow%20and%20black%20color%20scheme%2C%20side%20view%2C%20isolated%20on%20white%20background%2C%20studio%20lighting%2C%20high%20detail%2C%20commercial%20product%20photography&width=240&height=140&seq=8&orientation=landscape"
+                alt="Sedan" class="w-full h-36 object-cover" />
+              <div class="p-4">
+                <h3 class="font-semibold mb-1">Economy Sedan</h3>
+                <p class="text-sm text-gray-700 mb-2">Up to 4 passengers</p>
+                <div class="flex justify-between mb-2">
+                  <span class="text-xs text-gray-600">Base Fare:</span>
+                  <span class="text-sm font-medium">₹150</span>
+                </div>
+                <div class="flex justify-between mb-3">
+                  <span class="text-xs text-gray-600">Per KM:</span>
+                  <span class="text-sm font-medium">₹12</span>
+                </div>
+                <button
+                  class="openBookingBtn w-full bg-primary text-secondary text-sm font-medium py-2 !rounded-button cursor-pointer">
+                  Book Now
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 - Premium SUV -->
+          <div class="min-w-full px-2">
+            <div class="bg-white rounded shadow-md w-full max-w-md mx-auto overflow-hidden">
+              <img
+                src="https://readdy.ai/api/search-image?query=professional%20photograph%20of%20a%20modern%20SUV%20taxi%20car%2C%20yellow%20and%20black%20color%20scheme%2C%20side%20view%2C%20isolated%20on%20white%20background%2C%20studio%20lighting%2C%20high%20detail%2C%20commercial%20product%20photography&width=240&height=140&seq=9&orientation=landscape"
+                alt="SUV" class="w-full h-36 object-cover" />
+              <div class="p-4">
+                <h3 class="font-semibold mb-1">Premium SUV</h3>
+                <p class="text-sm text-gray-700 mb-2">Up to 6 passengers</p>
+                <div class="flex justify-between mb-2">
+                  <span class="text-xs text-gray-600">Base Fare:</span>
+                  <span class="text-sm font-medium">₹250</span>
+                </div>
+                <div class="flex justify-between mb-3">
+                  <span class="text-xs text-gray-600">Per KM:</span>
+                  <span class="text-sm font-medium">₹18</span>
+                </div>
+                <button
+                  class="openBookingBtn w-full bg-primary text-secondary text-sm font-medium py-2 !rounded-button cursor-pointer">
+                  Book Now
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 - Luxury Sedan -->
+          <div class="min-w-full px-2">
+            <div class="bg-white rounded shadow-md w-full max-w-md mx-auto overflow-hidden">
+              <img
+                src="https://readdy.ai/api/search-image?query=professional%20photograph%20of%20a%20modern%20luxury%20taxi%20car%2C%20yellow%20and%20black%20color%20scheme%2C%20side%20view%2C%20isolated%20on%20white%20background%2C%20studio%20lighting%2C%20high%20detail%2C%20commercial%20product%20photography&width=240&height=140&seq=10&orientation=landscape"
+                alt="Luxury" class="w-full h-36 object-cover" />
+              <div class="p-4">
+                <h3 class="font-semibold mb-1">Luxury Sedan</h3>
+                <p class="text-sm text-gray-700 mb-2">Up to 4 passengers</p>
+                <div class="flex justify-between mb-2">
+                  <span class="text-xs text-gray-600">Base Fare:</span>
+                  <span class="text-sm font-medium">₹350</span>
+                </div>
+                <div class="flex justify-between mb-3">
+                  <span class="text-xs text-gray-600">Per KM:</span>
+                  <span class="text-sm font-medium">₹22</span>
+                </div>
+                <button
+                  class="openBookingBtn w-full bg-primary text-secondary text-sm font-medium py-2 !rounded-button cursor-pointer">
+                  Book Now
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 4 - Mini Van (New) -->
+          <div class="min-w-full px-2">
+            <div class="bg-white rounded shadow-md w-full max-w-md mx-auto overflow-hidden">
+              <img
+                src="https://readdy.ai/api/search-image?query=professional%20photograph%20of%20a%20modern%20mini%20van%20taxi%2C%20yellow%20and%20black%20color%20scheme%2C%20side%20view%2C%20isolated%20on%20white%20background%2C%20studio%20lighting%2C%20high%20detail%2C%20commercial%20product%20photography&width=240&height=140&seq=11&orientation=landscape"
+                alt="Mini Van" class="w-full h-36 object-cover" />
+              <div class="p-4">
+                <h3 class="font-semibold mb-1">Mini Van</h3>
+                <p class="text-sm text-gray-700 mb-2">Up to 8 passengers</p>
+                <div class="flex justify-between mb-2">
+                  <span class="text-xs text-gray-600">Base Fare:</span>
+                  <span class="text-sm font-medium">₹300</span>
+                </div>
+                <div class="flex justify-between mb-3">
+                  <span class="text-xs text-gray-600">Per KM:</span>
+                  <span class="text-sm font-medium">₹20</span>
+                </div>
+                <button
+                  class="openBookingBtn w-full bg-primary text-secondary text-sm font-medium py-2 !rounded-button cursor-pointer">
+                  Book Now
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 5 - Electric Vehicle (New) -->
+          <div class="min-w-full px-2">
+            <div class="bg-white rounded shadow-md w-full max-w-md mx-auto overflow-hidden">
+              <img
+                src="https://readdy.ai/api/search-image?query=professional%20photograph%20of%20a%20modern%20electric%20taxi%20car%2C%20yellow%20and%20black%20color%20scheme%2C%20side%20view%2C%20isolated%20on%20white%20background%2C%20studio%20lighting%2C%20high%20detail%2C%20commercial%20product%20photography&width=240&height=140&seq=12&orientation=landscape"
+                alt="Electric Vehicle" class="w-full h-36 object-cover" />
+              <div class="p-4">
+                <h3 class="font-semibold mb-1">Electric Vehicle</h3>
+                <p class="text-sm text-gray-700 mb-2">Up to 4 passengers</p>
+                <div class="flex justify-between mb-2">
+                  <span class="text-xs text-gray-600">Base Fare:</span>
+                  <span class="text-sm font-medium">₹200</span>
+                </div>
+                <div class="flex justify-between mb-3">
+                  <span class="text-xs text-gray-600">Per KM:</span>
+                  <span class="text-sm font-medium">₹15</span>
+                </div>
+                <button
+                  class="openBookingBtn w-full bg-primary text-secondary text-sm font-medium py-2 !rounded-button cursor-pointer">
+                  Book Now
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 6 - Premium Minibus (New) -->
+          <div class="min-w-full px-2">
+            <div class="bg-white rounded shadow-md w-full max-w-md mx-auto overflow-hidden">
+              <img
+                src="https://readdy.ai/api/search-image?query=professional%20photograph%20of%20a%20modern%20minibus%20taxi%2C%20yellow%20and%20black%20color%20scheme%2C%20side%20view%2C%20isolated%20on%20white%20background%2C%20studio%20lighting%2C%20high%20detail%2C%20commercial%20product%20photography&width=240&height=140&seq=13&orientation=landscape"
+                alt="Minibus" class="w-full h-36 object-cover" />
+              <div class="p-4">
+                <h3 class="font-semibold mb-1">Premium Minibus</h3>
+                <p class="text-sm text-gray-700 mb-2">Up to 12 passengers</p>
+                <div class="flex justify-between mb-2">
+                  <span class="text-xs text-gray-600">Base Fare:</span>
+                  <span class="text-sm font-medium">₹450</span>
+                </div>
+                <div class="flex justify-between mb-3">
+                  <span class="text-xs text-gray-600">Per KM:</span>
+                  <span class="text-sm font-medium">₹25</span>
+                </div>
+                <button
+                  class="openBookingBtn w-full bg-primary text-secondary text-sm font-medium py-2 !rounded-button cursor-pointer">
+                  Book Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation Arrows -->
+      <button id="prev-slide"
+        class="absolute lg:-left-16 left-0 top-1/2 -translate-y-1/2 bg-white rounded-full p-2 shadow-md hover:bg-gray-100 focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+      <button id="next-slide"
+        class="absolute lg:-right-16 right-0 top-1/2 -translate-y-1/2 bg-white rounded-full p-2 shadow-md hover:bg-gray-100 focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+
+      <!-- Slide Indicators -->
+      <div class="flex justify-center mt-4 space-x-2">
+        <button class="slide-indicator w-2 h-2 rounded-full bg-gray-300" data-slide="0"></button>
+        <button class="slide-indicator w-2 h-2 rounded-full bg-gray-300" data-slide="1"></button>
+        <button class="slide-indicator w-2 h-2 rounded-full bg-gray-300" data-slide="2"></button>
+        <button class="slide-indicator w-2 h-2 rounded-full bg-gray-300" data-slide="3"></button>
+        <button class="slide-indicator w-2 h-2 rounded-full bg-gray-300" data-slide="4"></button>
+        <button class="slide-indicator w-2 h-2 rounded-full bg-gray-300" data-slide="5"></button>
+      </div>
+    </div>
+
+    <!-- Additional Charges -->
+    <div class="bg-white rounded shadow-md p-4 max-w-4xl mx-auto">
+      <h3 class="font-semibold mb-3 text-center">Additional Charges</h3>
+      <div class="space-y-2 text-sm">
+        <div class="flex justify-between">
+          <span>Night Charges (10 PM - 6 AM)</span>
+          <span class="font-medium">+10%</span>
+        </div>
+        <div class="flex justify-between">
+          <span>Waiting Charges (per hour)</span>
+          <span class="font-medium">₹100</span>
+        </div>
+        <div class="flex justify-between">
+          <span>Outstation Driver Allowance (per day)</span>
+          <span class="font-medium">₹300</span>
+        </div>
+      </div>
+      <div class="mt-4 text-center hidden">
+        <button class="bg-primary/10 text-secondary font-medium px-4 py-2 !rounded-button cursor-pointer">
+          Request Detailed Quote
+        </button>
+      </div>
+    </div>
+  </section>
+  <!-- Gallery Section -->
+  <section class="container mx-auto py-10 bg-gray-50" id="gallery">
+    <h2 class="text-2xl font-bold text-center mb-6">Gallery</h2>
+    <div class="relative mb-6 rounded-lg overflow-hidden shadow-md">
+      <img
+        src="https://readdy.ai/api/search-image?query=professional%20fleet%20of%20yellow%20and%20black%20taxis%20lined%20up%20in%20front%20of%20a%20landmark%2C%20bright%20daylight%2C%20clean%20modern%20vehicles%2C%20commercial%20photography%20style%2C%20realistic%20scene%2C%20high%20quality%20professional%20photograph&width=375&height=200&seq=11&orientation=landscape"
+        alt="Our Fleet" class="w-full h-48 object-cover" />
+      <div class="absolute bottom-3 right-3 bg-white/80 px-2 py-1 rounded-full text-xs">
+        1/6
+      </div>
+    </div>
+    <div class="grid grid-cols-3 gap-2">
+      <div class="aspect-square rounded overflow-hidden shadow-sm">
+        <img
+          src="https://readdy.ai/api/search-image?query=professional%20taxi%20driver%20opening%20door%20for%20customer%2C%20welcoming%20gesture%2C%20bright%20daylight%2C%20commercial%20photography%20style%2C%20realistic%20scene%2C%20high%20quality%20professional%20photograph&width=120&height=120&seq=12&orientation=squarish"
+          alt="Taxi Service" class="w-full h-full object-cover" />
+      </div>
+      <div class="aspect-square rounded overflow-hidden shadow-sm">
+        <img
+          src="https://readdy.ai/api/search-image?query=interior%20of%20clean%20modern%20taxi%20with%20leather%20seats%2C%20high%20quality%20professional%20photograph%2C%20commercial%20photography%20style&width=120&height=120&seq=13&orientation=squarish"
+          alt="Taxi Interior" class="w-full h-full object-cover" />
+      </div>
+      <div class="aspect-square rounded overflow-hidden shadow-sm">
+        <img
+          src="https://readdy.ai/api/search-image?query=happy%20customer%20paying%20taxi%20driver%2C%20smiling%20faces%2C%20daytime%2C%20commercial%20photography%20style%2C%20realistic%20scene%2C%20high%20quality%20professional%20photograph&width=120&height=120&seq=14&orientation=squarish"
+          alt="Happy Customer" class="w-full h-full object-cover" />
+      </div>
+      <div class="aspect-square rounded overflow-hidden shadow-sm">
+        <img
+          src="https://readdy.ai/api/search-image?query=taxi%20driving%20on%20scenic%20mountain%20road%2C%20beautiful%20landscape%20view%2C%20daytime%2C%20commercial%20photography%20style%2C%20realistic%20scene%2C%20high%20quality%20professional%20photograph&width=120&height=120&seq=15&orientation=squarish"
+          alt="Scenic Drive" class="w-full h-full object-cover" />
+      </div>
+      <div class="aspect-square rounded overflow-hidden shadow-sm">
+        <img
+          src="https://readdy.ai/api/search-image?query=taxi%20at%20airport%20terminal%2C%20passenger%20with%20luggage%2C%20daytime%2C%20commercial%20photography%20style%2C%20realistic%20scene%2C%20high%20quality%20professional%20photograph&width=120&height=120&seq=16&orientation=squarish"
+          alt="Airport Service" class="w-full h-full object-cover" />
+      </div>
+      <div class="aspect-square rounded overflow-hidden shadow-sm">
+        <img
+          src="https://readdy.ai/api/search-image?query=group%20of%20business%20people%20entering%20taxi%2C%20corporate%20travel%2C%20daytime%2C%20commercial%20photography%20style%2C%20realistic%20scene%2C%20high%20quality%20professional%20photograph&width=120&height=120&seq=17&orientation=squarish"
+          alt="Corporate Service" class="w-full h-full object-cover" />
+      </div>
+    </div>
+  </section>
+  <!-- Reviews Section -->
+  <section class="px-4 py-10" id="customerRe">
+    <h2 class="text-2xl font-bold text-center mb-6">Customer Reviews</h2>
+    <div class="overflow-x-auto hide-scrollbar">
+      <div class="flex gap-4 w-max pb-4 mx-auto">
+        <div class="bg-white rounded shadow-md p-4 w-72">
+          <div class="flex items-center mb-3">
+            <div class="w-12 h-12 rounded-full overflow-hidden mr-3">
+              <img
+                src="https://readdy.ai/api/search-image?query=professional%20headshot%20of%20smiling%20middle-aged%20Indian%20businessman%20in%20formal%20attire%2C%20neutral%20background%2C%20high%20quality%20portrait%20photograph&width=48&height=48&seq=18&orientation=squarish"
+                alt="John Mitchell" class="w-full h-full object-cover" />
+            </div>
+            <div>
+              <h3 class="font-semibold text-sm">Rajesh Kumar</h3>
+              <div class="flex text-primary">
+                <i class="ri-star-fill ri-xs"></i>
+                <i class="ri-star-fill ri-xs"></i>
+                <i class="ri-star-fill ri-xs"></i>
+                <i class="ri-star-fill ri-xs"></i>
+                <i class="ri-star-fill ri-xs"></i>
+              </div>
+            </div>
+          </div>
+          <p class="text-sm text-gray-700">
+            "I've been using Bharani Cabs for my daily office commute for over
+            a year now. Their drivers are always punctual and professional.
+            Highly recommended!"
+          </p>
+        </div>
+        <div class="bg-white rounded shadow-md p-4 w-72">
+          <div class="flex items-center mb-3">
+            <div class="w-12 h-12 rounded-full overflow-hidden mr-3">
+              <img
+                src="https://readdy.ai/api/search-image?query=professional%20headshot%20of%20smiling%20young%20Indian%20woman%20in%20business%20casual%20attire%2C%20neutral%20background%2C%20high%20quality%20portrait%20photograph&width=48&height=48&seq=19&orientation=squarish"
+                alt="Sarah Johnson" class="w-full h-full object-cover" />
+            </div>
+            <div>
+              <h3 class="font-semibold text-sm">Priya Sharma</h3>
+              <div class="flex text-primary">
+                <i class="ri-star-fill ri-xs"></i>
+                <i class="ri-star-fill ri-xs"></i>
+                <i class="ri-star-fill ri-xs"></i>
+                <i class="ri-star-fill ri-xs"></i>
+                <i class="ri-star-half-fill ri-xs"></i>
+              </div>
+            </div>
+          </div>
+          <p class="text-sm text-gray-700">
+            "Used their airport transfer service and was impressed with the
+            cleanliness of the car and professionalism of the driver. Will
+            definitely use again!"
+          </p>
+        </div>
+        <div class="bg-white rounded shadow-md p-4 w-72">
+          <div class="flex items-center mb-3">
+            <div class="w-12 h-12 rounded-full overflow-hidden mr-3">
+              <img
+                src="https://readdy.ai/api/search-image?query=professional%20headshot%20of%20smiling%20elderly%20Indian%20man%20in%20casual%20shirt%2C%20neutral%20background%2C%20high%20quality%20portrait%20photograph&width=48&height=48&seq=20&orientation=squarish"
+                alt="Robert Williams" class="w-full h-full object-cover" />
+            </div>
+            <div>
+              <h3 class="font-semibold text-sm">Anand Patel</h3>
+              <div class="flex text-primary">
+                <i class="ri-star-fill ri-xs"></i>
+                <i class="ri-star-fill ri-xs"></i>
+                <i class="ri-star-fill ri-xs"></i>
+                <i class="ri-star-fill ri-xs"></i>
+                <i class="ri-star-line ri-xs"></i>
+              </div>
+            </div>
+          </div>
+          <p class="text-sm text-gray-700">
+            "Booked an outstation trip to Mysore with family. The driver was
+            courteous and knowledgeable about the routes. Competitive pricing
+            too!"
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Enquiry Form Section -->
+  <div class="container mx-auto px-4" id="contact">
+    <div class="shadow-md bg-white rounded">
+      <div class="grid grid-cols-2 gap-x-6 max-sm:grid-cols-1 max-lg:grid-cols-1 gap-y-6">
+        <section class="px-4 py-10">
+          <h2 class="text-2xl font-bold text-center mb-6">Contact Us</h2>
+          <div class="bg-white rounded  overflow-hidden mb-6">
+            <div class="h-48 bg-gray-200 relative">
+              <img src="https://public.readdy.ai/gen_page/map_placeholder_1280x720.png" alt="Map"
+                class="absolute inset-0 w-full h-full object-cover" />
+            </div>
+            <div class="p-4 space-y-3">
+              <div class="flex items-start">
+                <div class="w-8 h-8 flex items-center justify-center mr-3 text-primary">
+                  <i class="ri-map-pin-line ri-lg"></i>
+                </div>
+                <div>
+                  <h3 class="font-medium text-sm">Address</h3>
+                  <p class="text-sm text-gray-700">
+                    123 Main Street, Koramangala, Bangalore, Karnataka 560034
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div class="w-8 h-8 flex items-center justify-center mr-3 text-primary">
+                  <i class="ri-phone-line ri-lg"></i>
+                </div>
+                <div>
+                  <h3 class="font-medium text-sm">Phone</h3>
+                  <p class="text-sm text-gray-700">
+                    +91 9876543210, +91 8765432109
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div class="w-8 h-8 flex items-center justify-center mr-3 text-primary">
+                  <i class="ri-mail-line ri-lg"></i>
+                </div>
+                <div>
+                  <h3 class="font-medium text-sm">Email</h3>
+                  <p class="text-sm text-gray-700">
+                    info@bharanicabs.com, booking@bharanicabs.com
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div class="w-8 h-8 flex items-center justify-center mr-3 text-primary">
+                  <i class="ri-time-line ri-lg"></i>
+                </div>
+                <div>
+                  <h3 class="font-medium text-sm">Working Hours</h3>
+                  <p class="text-sm text-gray-700">24/7 Service Available</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </section>
+        <section class="px-4 py-10 bg-gray-50">
+          <h2 class="text-2xl font-bold text-center mb-6">Enquire Now</h2>
+          <form class="bg-white rounded p-5 sm:max-w-[500px] max-w-auto mx-auto">
+            <div class="mb-4">
+              <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+              <input type="text" id="name"
+                class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-primary"
+                placeholder="Enter your name" />
+            </div>
+            <div class="mb-4">
+              <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+              <input type="tel" id="phone"
+                class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-primary"
+                placeholder="Enter your phone number" />
+            </div>
+            <div class="mb-4">
+              <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+              <input type="email" id="email"
+                class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-primary"
+                placeholder="Enter your email" />
+            </div>
+            <div class="mb-4">
+              <label for="service" class="block text-sm font-medium text-gray-700 mb-1">Service Required</label>
+              <div class="relative">
+                <select id="service"
+                  class="w-full px-3 py-2 border border-gray-300 rounded appearance-none focus:outline-none focus:ring-1 focus:ring-primary">
+                  <option value="" disabled selected>Select service</option>
+                  <option value="airport">Airport Transfer</option>
+                  <option value="outstation">Outstation Trip</option>
+                  <option value="local">Local City Ride</option>
+                  <option value="corporate">Corporate Travel</option>
+                  <option value="tour">Tour Package</option>
+                </select>
+                <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                  <i class="ri-arrow-down-s-line"></i>
+                </div>
+              </div>
+            </div>
+            <div class="mb-5">
+              <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Trip Details</label>
+              <textarea id="message" rows="3"
+                class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-primary"
+                placeholder="Enter pickup/drop location, date, time, etc."></textarea>
+            </div>
+            <button type="submit"
+              class="w-full bg-primary text-secondary font-semibold py-3 !rounded-button cursor-pointer">
+              Submit Enquiry
+            </button>
+            <div class="mt-4 text-center">
+              <button type="button" class="inline-flex items-center text-sm text-green-600 font-medium cursor-pointer">
+                <i class="ri-whatsapp-line ri-lg mr-1"></i>
+                Enquire via WhatsApp
+              </button>
+            </div>
+          </form>
+        </section>
+        <!-- Contact Section -->
+
+      </div>
+
+    </div>
+    <div class="text-center my-8">
+      <h3 class="font-medium mb-3">Connect With Us</h3>
+      <div class="flex justify-center gap-4">
+        <a href="#"
+          class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full text-secondary cursor-pointer">
+          <i class="ri-facebook-fill ri-lg"></i>
+        </a>
+        <a href="#"
+          class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full text-secondary cursor-pointer">
+          <i class="ri-instagram-line ri-lg"></i>
+        </a>
+        <a href="#"
+          class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full text-secondary cursor-pointer">
+          <i class="ri-twitter-x-line ri-lg"></i>
+        </a>
+        <a href="#"
+          class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full text-secondary cursor-pointer">
+          <i class="ri-whatsapp-line ri-lg"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- WhatsApp Float Button -->
+  <div class="fixed bottom-4 right-4 z-40">
+    <a href="#" class="w-12 h-12 flex items-center justify-center bg-primary rounded-full shadow-lg cursor-pointer">
+      <i class="ri-arrow-up-s-line ri-xl text-secondary"></i>
+    </a>
+  </div>
+  <!-- Tab Bar -->
+  <div class="fixed bottom-0 w-full bg-white border-t border-gray-200 z-50 pb-6 hidden">
+    <div class="grid grid-cols-5 h-14">
+      <a href="#" class="flex flex-col items-center justify-center cursor-pointer">
+        <i class="ri-home-5-fill ri-lg text-primary"></i>
+        <span class="text-[10px] mt-1">Home</span>
+      </a>
+      <a href="#" class="flex flex-col items-center justify-center cursor-pointer">
+        <i class="ri-compass-3-line ri-lg text-gray-500"></i>
+        <span class="text-[10px] mt-1">Explore</span>
+      </a>
+      <a href="#" class="flex flex-col items-center justify-center cursor-pointer">
+        <i class="ri-taxi-line ri-lg text-gray-500"></i>
+        <span class="text-[10px] mt-1">Book</span>
+      </a>
+      <a href="#" class="flex flex-col items-center justify-center cursor-pointer">
+        <i class="ri-file-list-3-line ri-lg text-gray-500"></i>
+        <span class="text-[10px] mt-1">Orders</span>
+      </a>
+      <a href="#" class="flex flex-col items-center justify-center cursor-pointer">
+        <i class="ri-user-3-line ri-lg text-gray-500"></i>
+        <span class="text-[10px] mt-1">Profile</span>
+      </a>
+    </div>
+  </div>
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+  const bookingButtons = document.querySelectorAll(".openBookingBtn");
+  const bookingDialog = document.getElementById("bookingDialog");
+  const closeDialog = document.getElementById("closeDialog");
+  const bookingForm = document.getElementById("bookingForm");
+
+  // Set minimum date to today
+  const today = new Date().toISOString().split("T")[0];
+  const bookingDateInput = document.getElementById("bookingDate");
+  if (bookingDateInput) bookingDateInput.min = today;
+
+  // Open modal on any button click
+  bookingButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      bookingDialog.classList.remove("hidden");
+      document.body.style.overflow = "hidden";
+    });
+  });
+
+  // Close modal
+  if (closeDialog) {
+    closeDialog.addEventListener("click", () => {
+      bookingDialog.classList.add("hidden");
+      document.body.style.overflow = "";
+    });
+  }
+
+  // Close on outside click
+  bookingDialog.addEventListener("click", (e) => {
+    if (e.target === bookingDialog) {
+      bookingDialog.classList.add("hidden");
+      document.body.style.overflow = "";
+    }
+  });
+
+  // Form submission
+  if (bookingForm) {
+    bookingForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      // Get form data
+      const formData = {
+        pickupLocation: document.getElementById("pickupLocation").value,
+        destination: document.getElementById("destination").value,
+        date: document.getElementById("bookingDate").value,
+        time: document.getElementById("bookingTime").value,
+        passengers: document.getElementById("passengers").value,
+        vehicleType: document.getElementById("vehicleType").value,
+        contactNumber: document.getElementById("contactNumber").value,
+        customerName: document.getElementById("customerName").value,
+      };
+
+      // Show success dialog
+      const successDialog = document.createElement("div");
+      successDialog.className =
+        "fixed top-4 left-1/2 -translate-x-1/2 bg-green-50 text-green-800 px-4 py-3 rounded-lg shadow-lg z-[70] flex items-center";
+      successDialog.innerHTML = `
+        <i class="ri-checkbox-circle-line ri-lg mr-2"></i>
+        <span>Booking confirmed! We'll contact you shortly.</span>
+      `;
+      document.body.appendChild(successDialog);
+
+      // Clear form and close modal
+      bookingForm.reset();
+      bookingDialog.classList.add("hidden");
+      document.body.style.overflow = "";
+
+      // Remove success dialog after 3 seconds
+      setTimeout(() => {
+        successDialog.remove();
+      }, 3000);
+    });
+  }
+
+  // Bottom tab interaction
+  const tabLinks = document.querySelectorAll(".fixed.bottom-0 a");
+  tabLinks.forEach((link) => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      tabLinks.forEach((tab) => {
+        const icon = tab.querySelector("i");
+        const text = tab.querySelector("span");
+        icon.classList.remove("text-primary");
+        icon.classList.add("text-gray-500");
+        text.classList.remove("text-primary");
+      });
+      const icon = this.querySelector("i");
+      const text = this.querySelector("span");
+      icon.classList.remove("text-gray-500");
+      icon.classList.add("text-primary");
+      text.classList.add("text-primary");
+    });
+  });
+});
+    document.addEventListener("DOMContentLoaded", function () {
+      const menuButton = document.getElementById("menuButton");
+      const menuDropdown = document.getElementById("menuDropdown");
+      let isMenuOpen = false;
+      menuButton.addEventListener("click", function (e) {
+        e.stopPropagation();
+        isMenuOpen = !isMenuOpen;
+        if (isMenuOpen) {
+          menuDropdown.classList.remove("hidden");
+        } else {
+          menuDropdown.classList.add("hidden");
+        }
+      });
+      document.addEventListener("click", function (e) {
+        if (!menuDropdown.contains(e.target) && isMenuOpen) {
+          menuDropdown.classList.add("hidden");
+          isMenuOpen = false;
+        }
+      });
+      menuDropdown.addEventListener("click", function (e) {
+        const link = e.target.closest("a");
+        if (link) {
+          const href = link.getAttribute("href");
+          if (href.startsWith("#")) {
+            e.preventDefault();
+            const targetElement = document.getElementById(href.substring(1));
+            if (targetElement) {
+              const navHeight = document.querySelector("nav").offsetHeight;
+              const targetPosition =
+                targetElement.getBoundingClientRect().top +
+                window.pageYOffset -
+                navHeight;
+              window.scrollTo({
+                top: targetPosition,
+                behavior: "smooth",
+              });
+            }
+            menuDropdown.classList.add("hidden");
+            isMenuOpen = false;
+          }
+        }
+      });
+    });
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const slides = document.getElementById('tariff-slides');
+      const prevBtn = document.getElementById('prev-slide');
+      const nextBtn = document.getElementById('next-slide');
+      const indicators = document.querySelectorAll('.slide-indicator');
+
+      let currentSlide = 0;
+      const totalSlides = 6;
+
+      function updateSlide() {
+        slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+        // Update indicators
+        indicators.forEach((indicator, index) => {
+          if (index === currentSlide) {
+            indicator.classList.add('bg-primary');
+            indicator.classList.remove('bg-gray-300');
+          } else {
+            indicator.classList.remove('bg-primary');
+            indicator.classList.add('bg-gray-300');
+          }
+        });
+      }
+
+      // Next slide
+      nextBtn.addEventListener('click', () => {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        updateSlide();
+      });
+
+      // Previous slide
+      prevBtn.addEventListener('click', () => {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        updateSlide();
+      });
+
+      // Indicator clicks
+      indicators.forEach(indicator => {
+        indicator.addEventListener('click', () => {
+          currentSlide = parseInt(indicator.getAttribute('data-slide'));
+          updateSlide();
+        });
+      });
+
+      // Initialize
+      updateSlide();
+
+      // Auto-advance (optional)
+      setInterval(() => {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        updateSlide();
+      }, 5000);
+    });
+
+  </script>
+  <script>
+  if (window.location.hash) {
+    history.replaceState(null, null, window.location.href.split('#')[0]);
+  }
+</script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggleBtn = document.querySelector('[data-collapse-toggle="navbar-sticky"]');
+      const navMenu = document.getElementById("navbar-sticky");
+
+      toggleBtn.addEventListener("click", function () {
+        navMenu.classList.toggle("hidden");
+      });
+    });
+  </script>
+
+</body>
+
+</html>
