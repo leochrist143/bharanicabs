@@ -36,6 +36,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" />
+
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+  <!-- jQuery (Required for Owl Carousel) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <style>
     html {
       scroll-behavior: smooth !important;
@@ -121,6 +129,29 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+
+    .owl-carousel .item2 {
+      text-align: center;
+      padding: 15px;
+    }
+
+    .owl-carousel .owl-item {
+      margin-block: 1rem;
+    }
+
+    .owl-nav {
+      position: absolute;
+      width: 100%;
+      display: flex;
+      column-gap: 1rem;
+      justify-content: center;
+    }
+
+    .owl-nav.disabled {
+      display: flex !important;
+      /* Force show navigation buttons */
+      padding-inline: 3rem;
     }
   </style>
 </head>
@@ -704,7 +735,7 @@
     </div>
   </section>
   <!-- Gallery Section -->
-  <section class="container mx-auto py-10 bg-gray-50" id="gallery">
+  <section class="container mx-auto py-10 bg-gray-50 px-4" id="gallery">
     <h2 class="text-2xl font-bold text-center mb-6">Gallery</h2>
     <div class="relative mb-6 rounded-lg overflow-hidden shadow-md block group cursor-pointer">
       <img
@@ -755,9 +786,9 @@
     </div>
   </section>
   <!-- Reviews Section -->
-  <section class="px-4 py-10" id="customerRe">
+  <section class="py-10" id="customerRe">
     <h2 class="text-2xl font-bold text-center mb-6">Customer Reviews</h2>
-    <div class="overflow-x-auto hide-scrollbar">
+    <!-- <div class="overflow-x-auto hide-scrollbar">
       <div class="flex gap-4 w-max pb-4 mx-auto">
         <div class="bg-white rounded shadow-md p-4 w-72">
           <div class="flex items-center mb-3">
@@ -832,8 +863,99 @@
           </p>
         </div>
       </div>
+    </div> -->
+
+
+    <div class="container mx-auto px-6">
+      <div class="owl-carousel" id="owl-carousel">
+        <div class="flex justify-center">
+          <div class="item2 bg-white rounded shadow-md p-4 w-72">
+            <div class="flex items-center mb-3">
+              <div class="w-12 h-12 rounded-full overflow-hidden mr-3">
+                <img
+                  src="https://readdy.ai/api/search-image?query=professional%20headshot%20of%20smiling%20middle-aged%20Indian%20businessman%20in%20formal%20attire%2C%20neutral%20background%2C%20high%20quality%20portrait%20photograph&width=48&height=48&seq=18&orientation=squarish"
+                  alt="John Mitchell" class="w-full h-full object-cover" />
+              </div>
+              <div>
+                <h3 class="font-semibold text-sm">Rajesh Kumar</h3>
+                <div class="flex text-primary">
+                  <i class="ri-star-fill ri-xs"></i>
+                  <i class="ri-star-fill ri-xs"></i>
+                  <i class="ri-star-fill ri-xs"></i>
+                  <i class="ri-star-fill ri-xs"></i>
+                  <i class="ri-star-fill ri-xs"></i>
+                </div>
+              </div>
+            </div>
+            <p class="text-sm text-gray-700">
+              "I've been using Bharani Cabs for my daily office commute for over
+              a year now. Their drivers are always punctual and professional.
+              Highly recommended!"
+            </p>
+          </div>
+        </div>
+
+        <div class="flex justify-center">
+          <div class="item2 bg-white rounded shadow-md p-4 w-72">
+            <div class="flex items-center mb-3">
+              <div class="w-12 h-12 rounded-full overflow-hidden mr-3">
+                <img
+                  src="https://readdy.ai/api/search-image?query=professional%20headshot%20of%20smiling%20young%20Indian%20woman%20in%20business%20casual%20attire%2C%20neutral%20background%2C%20high%20quality%20portrait%20photograph&width=48&height=48&seq=19&orientation=squarish"
+                  alt="Sarah Johnson" class="w-full h-full object-cover" />
+              </div>
+              <div>
+                <h3 class="font-semibold text-sm">Priya Sharma</h3>
+                <div class="flex text-primary">
+                  <i class="ri-star-fill ri-xs"></i>
+                  <i class="ri-star-fill ri-xs"></i>
+                  <i class="ri-star-fill ri-xs"></i>
+                  <i class="ri-star-fill ri-xs"></i>
+                  <i class="ri-star-half-fill ri-xs"></i>
+                </div>
+              </div>
+            </div>
+            <p class="text-sm text-gray-700">
+              "Used their airport transfer service and was impressed with the
+              cleanliness of the car and professionalism of the driver. Will
+              definitely use again!"
+            </p>
+          </div>
+        </div>
+
+        <div class="flex justify-center">
+          <div class="item2 rounded shadow-md p-4 w-72">
+            <div class="flex items-center mb-3">
+              <div class="w-12 h-12 rounded-full overflow-hidden mr-3">
+                <img
+                  src="https://readdy.ai/api/search-image?query=professional%20headshot%20of%20smiling%20elderly%20Indian%20man%20in%20casual%20shirt%2C%20neutral%20background%2C%20high%20quality%20portrait%20photograph&width=48&height=48&seq=20&orientation=squarish"
+                  alt="Robert Williams" class="w-full h-full object-cover" />
+              </div>
+              <div>
+                <h3 class="font-semibold text-sm">Anand Patel</h3>
+                <div class="flex text-primary">
+                  <i class="ri-star-fill ri-xs"></i>
+                  <i class="ri-star-fill ri-xs"></i>
+                  <i class="ri-star-fill ri-xs"></i>
+                  <i class="ri-star-fill ri-xs"></i>
+                  <i class="ri-star-line ri-xs"></i>
+                </div>
+              </div>
+            </div>
+            <p class="text-sm text-gray-700">
+              "Booked an outstation trip to Mysore with family. The driver was
+              courteous and knowledgeable about the routes. Competitive pricing
+              too!"
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
+
+
+
+
+
   <!-- Enquiry Form Section -->
   <div class="container mx-auto px-4" id="contact">
     <div class="shadow-md bg-white rounded">
@@ -1014,6 +1136,8 @@
     </div>
   </div> -->
 
+  <!-- Owl Carousel JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
@@ -1244,6 +1368,29 @@
             navMenu.classList.add("hidden");
           }
         });
+      });
+    });
+  </script>
+
+  <script>
+    $(document).ready(function () {
+      var owl2 = $('#owl-carousel'); // Ensuring it only affects owl-carousel2
+
+      owl2.owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        navText: [
+          "<img src='./prev-icon.svg' class='prev-btn h-9 w-fit bg-white rounded-full p-2 shadow-md hover:bg-gray-100 focus:outline-none' alt='owl-nav-prev-btn'>",
+          "<img src='./next-icon.svg' class='next-btn h-9 w-fit bg-white rounded-full p-2 shadow-md hover:bg-gray-100 focus:outline-none' alt='owl-nav-next-btn'>"
+        ],
+        autoplay: true,
+        responsiveClass: true,
+        responsive: {
+          0: { items: 1, nav: true },
+          600: { items: 3, nav: true },
+          1000: { items: 3, nav: true }
+        },
       });
     });
   </script>
