@@ -1,0 +1,6 @@
+{
+    "require": {
+        "phpmailer/phpmailer": "^6.10",
+        "xamin/handlebars.php": "^0.10.4"
+    }
+}
