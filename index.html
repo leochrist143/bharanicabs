@@ -42,8 +42,13 @@
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
   <!-- jQuery (Required for Owl Carousel) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+
   <style>
     html {
       scroll-behavior: smooth !important;
@@ -140,18 +145,31 @@
       margin-block: 1rem;
     }
 
-    .owl-nav {
-      position: absolute;
-      width: 100%;
-      display: flex;
-      column-gap: 1rem;
-      justify-content: center;
+    .scrollHidden {
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
     }
 
-    .owl-nav.disabled {
+    .owl-nav {
+      display: none;
+    }
+
+    .owl-dots {
       display: flex !important;
-      /* Force show navigation buttons */
-      padding-inline: 3rem;
+      justify-content: center;
+      column-gap: 1rem;
+    }
+
+    .owl-dot {
+      height: 14px;
+      width: 14px;
+      border-radius: 50%;
+      background-color: #999 !important;
+    }
+
+    .owl-dot.active {
+      background-color: #fed100 !important;
     }
   </style>
 </head>
@@ -254,7 +272,7 @@
 
 
   <!-- About Us Section -->
-  <section id="about" class="container mx-auto px-4 py-10">
+  <section id="about" class="container mx-auto px-4 py-10 overflow-x-hidden">
     <h2 class="text-2xl font-bold text-center mb-6">About Us</h2>
     <p class="text-gray-700 text-center mb-4">
       Founded in 2015, Bharani Cabs has been providing premium transportation
@@ -266,21 +284,21 @@
       ensure that every journey with us is pleasant and hassle-free.
     </p>
     <div class="grid grid-cols-3 gap-3 mb-8">
-      <div class="bg-gray-50 p-3 rounded shadow-sm text-center">
+      <div class="bg-gray-50 p-3 rounded shadow-sm text-center" data-aos="fade-right" data-aos-duration="1000">
         <div class="w-12 h-12 mx-auto mb-2 bg-primary/10 rounded-full flex items-center justify-center">
           <i class="ri-time-line ri-lg text-primary"></i>
         </div>
         <h3 class="text-sm font-semibold">10+ Years</h3>
         <p class="text-xs text-gray-600">Experience</p>
       </div>
-      <div class="bg-gray-50 p-3 rounded shadow-sm text-center">
+      <div class="bg-gray-50 p-3 rounded shadow-sm text-center" data-aos="fade-up" data-aos-duration="1000">
         <div class="w-12 h-12 mx-auto mb-2 bg-primary/10 rounded-full flex items-center justify-center">
           <i class="ri-shield-check-line ri-lg text-primary"></i>
         </div>
         <h3 class="text-sm font-semibold">Safety First</h3>
         <p class="text-xs text-gray-600">Verified Drivers</p>
       </div>
-      <div class="bg-gray-50 p-3 rounded shadow-sm text-center">
+      <div class="bg-gray-50 p-3 rounded shadow-sm text-center" data-aos="fade-left" data-aos-duration="1000">
         <div class="w-12 h-12 mx-auto mb-2 bg-primary/10 rounded-full flex items-center justify-center">
           <i class="ri-wallet-3-line ri-lg text-primary"></i>
         </div>
@@ -300,28 +318,28 @@
     <h2 class="text-2xl font-bold text-center mb-6">Our Services</h2>
     <div class="grid grid-cols-4 gap-x-6 max-sm:grid-cols-1 max-lg:grid-cols-2 gap-y-6">
       <div class="bg-white p-4 rounded shadow-sm">
-        <img src="./services-1.png" alt="Airport Transfer" class="w-fit h-20 mx-auto mb-2" />
+        <img src="./services-1.svg" alt="Airport Transfer" class="w-fit h-20 mx-auto mb-2" />
         <h3 class="text-sm font-semibold text-center">Airport Transfers</h3>
         <p class="text-xs text-gray-600 text-center">
           Punctual pickup and drop service
         </p>
       </div>
       <div class="bg-white p-4 rounded shadow-sm">
-        <img src="./services-2.png" alt="Outstation Trips" class="w-fit h-20 mx-auto mb-2" />
+        <img src="./services-2.svg" alt="Outstation Trips" class="w-fit h-20 mx-auto mb-2" />
         <h3 class="text-sm font-semibold text-center">Outstation Trips</h3>
         <p class="text-xs text-gray-600 text-center">
           Comfortable long-distance travel
         </p>
       </div>
       <div class="bg-white p-4 rounded shadow-sm">
-        <img src="./services-3.png" alt="Local City Rides" class="w-fit h-20 mx-auto mb-2" />
+        <img src="./services-3.svg" alt="Local City Rides" class="w-fit h-20 mx-auto mb-2" />
         <h3 class="text-sm font-semibold text-center">Local City Rides</h3>
         <p class="text-xs text-gray-600 text-center">
           Quick and convenient city travel
         </p>
       </div>
       <div class="bg-white p-4 rounded shadow-sm">
-        <img src="./services-4.png" alt="Corporate Travel" class="w-fit h-20 mx-auto mb-2" />
+        <img src="./services-4.svg" alt="Corporate Travel" class="w-fit h-20 mx-auto mb-2" />
         <h3 class="text-sm font-semibold text-center">Corporate Travel</h3>
         <p class="text-xs text-gray-600 text-center">
           Business travel solutions
@@ -333,21 +351,21 @@
     <div class="flex justify-center lg:flex-row md:flex-row flex-col">
       <div class="grid grid-cols-3 gap-x-6 max-sm:grid-cols-1 max-lg:grid-cols-2 gap-y-6 mt-6">
         <div class="bg-white p-4 rounded shadow-sm max-sm:col-span-1 max-lg:col-span-2">
-          <img src="./services-5.png" alt="Tour Packages" class="w-fit h-20 mx-auto mb-2" />
+          <img src="./services-5.svg" alt="Tour Packages" class="w-fit h-20 mx-auto mb-2" />
           <h3 class="text-sm font-semibold text-center">Tour Packages</h3>
           <p class="text-xs text-gray-600 text-center">
             Customized tour plans with experienced guides
           </p>
         </div>
         <div class="bg-white p-4 rounded shadow-sm">
-          <img src="./services-6.png" class="w-fit h-20 mx-auto mb-2" alt="Long Term Rental">
+          <img src="./services-6.svg" class="w-fit h-20 mx-auto mb-2" alt="Long Term Rental">
           <h3 class="text-sm font-semibold text-center">Long Term Rental</h3>
           <p class="text-xs text-gray-600 text-center">
             Business travel solutions
           </p>
         </div>
         <div class="bg-white p-4 rounded shadow-sm">
-          <img src="./services-7.png" class="w-fit h-20 mx-auto mb-2" alt="Employee Transportation">
+          <img src="./services-7.svg" class="w-fit h-20 mx-auto mb-2" alt="Employee Transportation">
           <h3 class="text-sm font-semibold text-center">Employee Transportation</h3>
           <p class="text-xs text-gray-600 text-center">
             Business travel solutions
@@ -356,112 +374,6 @@
       </div>
     </div>
   </section>
-  <!-- Tariff Section -->
-  <!-- <section class="px-4 py-10">
-      <h2 class="text-2xl font-bold text-center mb-6">Our Tariff</h2>
-      <div class="overflow-x-auto hide-scrollbar mb-6">
-        <div class="flex gap-4 w-max pb-4">
-          <div class="bg-white rounded shadow-md w-64 overflow-hidden">
-            <img
-              src="https://readdy.ai/api/search-image?query=professional%20photograph%20of%20a%20modern%20sedan%20taxi%20car%2C%20yellow%20and%20black%20color%20scheme%2C%20side%20view%2C%20isolated%20on%20white%20background%2C%20studio%20lighting%2C%20high%20detail%2C%20commercial%20product%20photography&width=240&height=140&seq=8&orientation=landscape"
-              alt="Sedan"
-              class="w-full h-36 object-cover"
-            />
-            <div class="p-4">
-              <h3 class="font-semibold mb-1">Economy Sedan</h3>
-              <p class="text-sm text-gray-700 mb-2">Up to 4 passengers</p>
-              <div class="flex justify-between mb-2">
-                <span class="text-xs text-gray-600">Base Fare:</span>
-                <span class="text-sm font-medium">₹150</span>
-              </div>
-              <div class="flex justify-between mb-3">
-                <span class="text-xs text-gray-600">Per KM:</span>
-                <span class="text-sm font-medium">₹12</span>
-              </div>
-              <button
-                class="w-full bg-primary text-secondary text-sm font-medium py-2 !rounded-button cursor-pointer"
-              >
-                Book Now
-              </button>
-            </div>
-          </div>
-          <div class="bg-white rounded shadow-md w-64 overflow-hidden">
-            <img
-              src="https://readdy.ai/api/search-image?query=professional%20photograph%20of%20a%20modern%20SUV%20taxi%20car%2C%20yellow%20and%20black%20color%20scheme%2C%20side%20view%2C%20isolated%20on%20white%20background%2C%20studio%20lighting%2C%20high%20detail%2C%20commercial%20product%20photography&width=240&height=140&seq=9&orientation=landscape"
-              alt="SUV"
-              class="w-full h-36 object-cover"
-            />
-            <div class="p-4">
-              <h3 class="font-semibold mb-1">Premium SUV</h3>
-              <p class="text-sm text-gray-700 mb-2">Up to 6 passengers</p>
-              <div class="flex justify-between mb-2">
-                <span class="text-xs text-gray-600">Base Fare:</span>
-                <span class="text-sm font-medium">₹250</span>
-              </div>
-              <div class="flex justify-between mb-3">
-                <span class="text-xs text-gray-600">Per KM:</span>
-                <span class="text-sm font-medium">₹18</span>
-              </div>
-              <button
-                class="w-full bg-primary text-secondary text-sm font-medium py-2 !rounded-button cursor-pointer"
-              >
-                Book Now
-              </button>
-            </div>
-          </div>
-          <div class="bg-white rounded shadow-md w-64 overflow-hidden">
-            <img
-              src="https://readdy.ai/api/search-image?query=professional%20photograph%20of%20a%20modern%20luxury%20taxi%20car%2C%20yellow%20and%20black%20color%20scheme%2C%20side%20view%2C%20isolated%20on%20white%20background%2C%20studio%20lighting%2C%20high%20detail%2C%20commercial%20product%20photography&width=240&height=140&seq=10&orientation=landscape"
-              alt="Luxury"
-              class="w-full h-36 object-cover"
-            />
-            <div class="p-4">
-              <h3 class="font-semibold mb-1">Luxury Sedan</h3>
-              <p class="text-sm text-gray-700 mb-2">Up to 4 passengers</p>
-              <div class="flex justify-between mb-2">
-                <span class="text-xs text-gray-600">Base Fare:</span>
-                <span class="text-sm font-medium">₹350</span>
-              </div>
-              <div class="flex justify-between mb-3">
-                <span class="text-xs text-gray-600">Per KM:</span>
-                <span class="text-sm font-medium">₹22</span>
-              </div>
-              <button
-                class="w-full bg-primary text-secondary text-sm font-medium py-2 !rounded-button cursor-pointer"
-              >
-                Book Now
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="bg-white rounded shadow-md p-4">
-        <h3 class="font-semibold mb-3 text-center">Additional Charges</h3>
-        <div class="space-y-2 text-sm">
-          <div class="flex justify-between">
-            <span>Night Charges (10 PM - 6 AM)</span>
-            <span class="font-medium">+10%</span>
-          </div>
-          <div class="flex justify-between">
-            <span>Waiting Charges (per hour)</span>
-            <span class="font-medium">₹100</span>
-          </div>
-          <div class="flex justify-between">
-            <span>Outstation Driver Allowance (per day)</span>
-            <span class="font-medium">₹300</span>
-          </div>
-        </div>
-        <div class="mt-4 text-center">
-          <button
-            class="bg-primary/10 text-secondary font-medium px-4 py-2 !rounded-button cursor-pointer"
-          >
-            Request Detailed Quote
-          </button>
-        </div>
-      </div>
-    </section> -->
-
-
 
   <section class="px-4 py-10" id="tariff">
     <h2 class="text-2xl font-bold text-center mb-6">Our Tariff</h2>
@@ -925,87 +837,10 @@
   <!-- Reviews Section -->
   <section class="py-10" id="customerRe">
     <h2 class="text-2xl font-bold text-center mb-6">Customer Reviews</h2>
-    <!-- <div class="overflow-x-auto hide-scrollbar">
-      <div class="flex gap-4 w-max pb-4 mx-auto">
-        <div class="bg-white rounded shadow-md p-4 w-72">
-          <div class="flex items-center mb-3">
-            <div class="w-12 h-12 rounded-full overflow-hidden mr-3">
-              <img
-                src="https://readdy.ai/api/search-image?query=professional%20headshot%20of%20smiling%20middle-aged%20Indian%20businessman%20in%20formal%20attire%2C%20neutral%20background%2C%20high%20quality%20portrait%20photograph&width=48&height=48&seq=18&orientation=squarish"
-                alt="John Mitchell" class="w-full h-full object-cover" />
-            </div>
-            <div>
-              <h3 class="font-semibold text-sm">Rajesh Kumar</h3>
-              <div class="flex text-primary">
-                <i class="ri-star-fill ri-xs"></i>
-                <i class="ri-star-fill ri-xs"></i>
-                <i class="ri-star-fill ri-xs"></i>
-                <i class="ri-star-fill ri-xs"></i>
-                <i class="ri-star-fill ri-xs"></i>
-              </div>
-            </div>
-          </div>
-          <p class="text-sm text-gray-700">
-            "I've been using Bharani Cabs for my daily office commute for over
-            a year now. Their drivers are always punctual and professional.
-            Highly recommended!"
-          </p>
-        </div>
-        <div class="bg-white rounded shadow-md p-4 w-72">
-          <div class="flex items-center mb-3">
-            <div class="w-12 h-12 rounded-full overflow-hidden mr-3">
-              <img
-                src="https://readdy.ai/api/search-image?query=professional%20headshot%20of%20smiling%20young%20Indian%20woman%20in%20business%20casual%20attire%2C%20neutral%20background%2C%20high%20quality%20portrait%20photograph&width=48&height=48&seq=19&orientation=squarish"
-                alt="Sarah Johnson" class="w-full h-full object-cover" />
-            </div>
-            <div>
-              <h3 class="font-semibold text-sm">Priya Sharma</h3>
-              <div class="flex text-primary">
-                <i class="ri-star-fill ri-xs"></i>
-                <i class="ri-star-fill ri-xs"></i>
-                <i class="ri-star-fill ri-xs"></i>
-                <i class="ri-star-fill ri-xs"></i>
-                <i class="ri-star-half-fill ri-xs"></i>
-              </div>
-            </div>
-          </div>
-          <p class="text-sm text-gray-700">
-            "Used their airport transfer service and was impressed with the
-            cleanliness of the car and professionalism of the driver. Will
-            definitely use again!"
-          </p>
-        </div>
-        <div class="bg-white rounded shadow-md p-4 w-72">
-          <div class="flex items-center mb-3">
-            <div class="w-12 h-12 rounded-full overflow-hidden mr-3">
-              <img
-                src="https://readdy.ai/api/search-image?query=professional%20headshot%20of%20smiling%20elderly%20Indian%20man%20in%20casual%20shirt%2C%20neutral%20background%2C%20high%20quality%20portrait%20photograph&width=48&height=48&seq=20&orientation=squarish"
-                alt="Robert Williams" class="w-full h-full object-cover" />
-            </div>
-            <div>
-              <h3 class="font-semibold text-sm">Anand Patel</h3>
-              <div class="flex text-primary">
-                <i class="ri-star-fill ri-xs"></i>
-                <i class="ri-star-fill ri-xs"></i>
-                <i class="ri-star-fill ri-xs"></i>
-                <i class="ri-star-fill ri-xs"></i>
-                <i class="ri-star-line ri-xs"></i>
-              </div>
-            </div>
-          </div>
-          <p class="text-sm text-gray-700">
-            "Booked an outstation trip to Mysore with family. The driver was
-            courteous and knowledgeable about the routes. Competitive pricing
-            too!"
-          </p>
-        </div>
-      </div>
-    </div> -->
-
 
     <div class="container mx-auto px-6">
       <div class="max-w-5xl mx-auto">
-        <div class="owl-carousel" id="owl-carousel">
+        <div class="owl-carousel" id="owl-carousel3">
           <div class="flex justify-center">
             <div class="item2 bg-white rounded shadow-md p-4 w-72">
               <div class="flex items-center mb-3">
@@ -1224,14 +1059,15 @@
                 placeholder="Enter pickup/drop location, date, time, etc."></textarea>
             </div>
             <button type="submit"
-              class="w-full bg-primary text-secondary font-semibold py-3 !rounded-button cursor-pointer">
+              class="w-full text-white font-semibold py-3 rounded-md bg-[#004875] border border-[#004875] hover:text-[#004875] hover:bg-transparent transition-all ease-in-out duration-300">
               Submit Enquiry
             </button>
             <div class="mt-4 text-center">
-              <button type="button" class="inline-flex items-center text-sm text-green-600 font-medium cursor-pointer">
+              <a href="https://wa.me/9488477121?text=Welcome%20to%20Bharani%20Cabs" target="_blank"
+                class="inline-flex items-center text-sm text-green-600 font-medium cursor-pointer">
                 <i class="ri-whatsapp-line ri-lg mr-1"></i>
                 Enquire via WhatsApp
-              </button>
+              </a>
             </div>
           </form>
         </section>
@@ -1266,13 +1102,14 @@
 
   <div class="flex flex-col gap-y-4 items-center fixed bottom-4 right-4 z-40">
     <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/9488477121?" target="_blank">
+    <a href="https://wa.me/9488477121?text=Welcome%20to%20Bharani%20Cabs" target="_blank">
       <img src="./whatsapp-icon.svg" class="h-14 w-fit" alt="whatsapp-icon">
     </a>
     <!-- Scroll Up Float Button -->
-    <a href="#" class="w-12 h-12 flex items-center justify-center bg-primary rounded-full shadow-lg cursor-pointer">
+    <div id="scrollTopButton"
+      class="w-12 h-12 flex items-center justify-center bg-primary rounded-full shadow-lg cursor-pointer">
       <i class="ri-arrow-up-s-line ri-xl text-secondary"></i>
-    </a>
+    </div>
   </div>
 
   <!-- Booking Modal -->
@@ -1281,7 +1118,7 @@
     <div class="bg-white rounded-lg shadow-lg w-full max-w-xl p-4 relative max-sm:top-36">
 
       <!-- Close Button -->
-      <button id="closeDialog" class="absolute top-2 right-2 text-gray-500 hover:text-gray-800 text-xl">
+      <button id="closeDialog" class="absolute top-2 right-2 text-gray-500 hover:text-red-500 text-3xl">
         &times;
       </button>
 
@@ -1447,6 +1284,13 @@
   <!-- Owl Carousel JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
+  <!-- AOS Animation -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script>
+    AOS.init();
+  </script>
+
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const bookingButtons = document.querySelectorAll(".openBookingBtn");
@@ -1520,28 +1364,7 @@
     });
   </script>
 
-  <script>
-    $(document).ready(function () {
-      var owl2 = $('#owl-carousel'); // Ensuring it only affects owl-carousel2
 
-      owl2.owlCarousel({
-        loop: true,
-        margin: 10,
-        nav: true,
-        navText: [
-          "<img src='./prev-icon.svg' class='prev-btn h-9 w-fit bg-white rounded-full p-2 shadow-md hover:bg-gray-100 focus:outline-none' alt='owl-nav-prev-btn'>",
-          "<img src='./next-icon.svg' class='next-btn h-9 w-fit bg-white rounded-full p-2 shadow-md hover:bg-gray-100 focus:outline-none' alt='owl-nav-next-btn'>"
-        ],
-        autoplay: true,
-        responsiveClass: true,
-        responsive: {
-          0: { items: 1, nav: true },
-          600: { items: 3, nav: true },
-          1000: { items: 4, nav: true }
-        },
-      });
-    });
-  </script>
 
   <script>
     // Open the Modal
@@ -1588,16 +1411,34 @@
 
   <script>
     $(document).ready(function () {
-      var owl3 = $('#owl-carousel2'); // Ensuring it only affects owl-carousel2
+      var owl2 = $('#owl-carousel'); // Ensuring it only affects owl-carousel2
+
+      owl2.owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: false,
+        dots: false,
+        autoplay: true,
+        responsiveClass: true,
+        responsive: {
+          0: { items: 1, nav: true },
+          600: { items: 3, nav: true },
+          1000: { items: 4, nav: true }
+        },
+      });
+    });
+  </script>
+
+  <script>
+    $(document).ready(function () {
+      var owl3 = $('#owl-carousel3'); // Ensuring it only affects owl-carousel2
 
       owl3.owlCarousel({
         loop: true,
         margin: 10,
-        nav: true,
-        navText: [
-          "<img src='./prev-icon.svg' class='prev-btn h-9 w-fit bg-white rounded-full p-2 shadow-md hover:bg-gray-100 focus:outline-none' alt='owl-nav-prev-btn'>",
-          "<img src='./next-icon.svg' class='next-btn h-9 w-fit bg-white rounded-full p-2 shadow-md hover:bg-gray-100 focus:outline-none' alt='owl-nav-next-btn'>"
-        ],
+        nav: false,
+        dots: true,
+        dotsEach: true,
         autoplay: true,
         responsiveClass: true,
         responsive: {
@@ -1701,6 +1542,31 @@
         }
       });
     });
+  </script>
+
+  <script>
+    const scrollTopButton = document.getElementById('scrollTopButton');
+
+    // Show or hide the button based on scroll position
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) { // Adjust the threshold as needed
+        scrollTopButton.classList.remove('scrollHidden');
+      } else {
+        scrollTopButton.classList.add('scrollHidden');
+      }
+    });
+
+    // Smoothly scroll to the top when the button is clicked
+    scrollTopButton.addEventListener('click', (e) => {
+      e.preventDefault(); // Prevent the default anchor tag behavior
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    // Initially hide the button
+    scrollTopButton.classList.add('scrollHidden');
   </script>
 
 </body>
