@@ -499,8 +499,8 @@
 
     <!-- Additional Charges -->
     <div class="max-w-4xl mx-auto">
-      <div class="flex gap-x-6 w-full">
-        <div class="bg-white rounded shadow-md p-4 mt-6 w-1/2">
+      <div class="flex max-sm:flex-col gap-x-6 w-full">
+        <div class="bg-white rounded shadow-md p-4 mt-6 w-1/2 max-sm:w-full">
           <h3 class="font-semibold mb-3 text-center">Additional Charges</h3>
           <div class="flex flex-col gap-y-4 text-sm h-[80%] justify-evenly">
             <div class="flex justify-between">
@@ -982,7 +982,11 @@
             <div class="h-48 bg-gray-200 relative">
               <!-- <img src="https://public.readdy.ai/gen_page/map_placeholder_1280x720.png" alt="Map"
                 class="absolute inset-0 w-full h-full object-cover" /> -->
-                <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3943.9243952271686!2d77.73843099999999!3d8.69873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zOMKwNDEnNTUuNCJOIDc3wrA0NCcxOC40IkU!5e0!3m2!1sen!2sin!4v1745942162851!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" class="absolute inset-0 w-full h-full object-cover" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3943.9243952271686!2d77.73843099999999!3d8.69873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zOMKwNDEnNTUuNCJOIDc3wrA0NCcxOC40IkU!5e0!3m2!1sen!2sin!4v1745942162851!5m2!1sen!2sin"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                class="absolute inset-0 w-full h-full object-cover"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div class="p-4 space-y-3">
               <div class="flex items-start">
@@ -1425,6 +1429,30 @@
       slides[slideIndex - 1].style.display = "flex";
       dots[slideIndex - 1].className += " active";
       captionText.innerHTML = dots[slideIndex - 1].alt;
+    }
+
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    const modal2 = document.getElementById("myModal");
+
+    modal.addEventListener("touchstart", function (e) {
+      touchStartX = e.changedTouches[0].screenX;
+    }, false);
+
+    modal.addEventListener("touchend", function (e) {
+      touchEndX = e.changedTouches[0].screenX;
+      handleGesture();
+    }, false);
+
+    function handleGesture() {
+      const swipeThreshold = 50; // Minimum distance for a swipe
+      if (touchEndX < touchStartX - swipeThreshold) {
+        plusSlides(1); // Swipe left -> next slide
+      }
+      if (touchEndX > touchStartX + swipeThreshold) {
+        plusSlides(-1); // Swipe right -> previous slide
+      }
     }
   </script>
 
