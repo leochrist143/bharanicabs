@@ -250,20 +250,21 @@
 
   <!-- Hero Section -->
   <section class="relative h-[500px] pt-[4.5rem] overflow-hidden">
-    <div class="absolute inset-0 bg-black/40 z-10"></div>
+    <div class="absolute inset-0 bg-black/40 z-10 mix-blend-overlay"></div>
     <div class="gif-container absolute inset-0">
-      <img src="./banner.jpg" alt="Taxi in cityscape" class="w-full h-full object-cover" />
+      <img src="./hero gif.gif" alt="Taxi in cityscape" class="w-full h-full object-cover" />
     </div>
     <div class="relative z-20 flex flex-col items-center justify-center h-full gap-y-4 px-6 text-center">
       <!-- <h1 class="logo text-4xl font-bold text-white mb-3">Bharani Cabs</h1>
       <p class="text-white text-xl font-medium mb-8">
         Ride Safe. Ride Smart.
       </p> -->
-      <div class="flex justify-center">
-        <img src="./bharani-home-logo.png" class="h-20 max-sm:h-fit w-fit" alt="bharani-home-logo">
+      <div class="flex flex-col justify-center">
+        <img src="./LogoBharani.png" class="h-20 max-sm:h-fit w-fit" alt="bharani-home-logo">
+        <img src="./Final_1.png" class="h-20 max-sm:h-fit w-fit mx-auto" alt="bharani-home-logo">
       </div>
       <button
-        class="openBookingBtn bg-primary text-white font-semibold px-8 py-3 !rounded-button shadow-lg hover:bg-primary/90 transition-all cursor-pointer">
+        class="openBookingBtn bg-[#004875] hover:border-[#004875] hover:border hover:text-[#004875]  text-white font-semibold px-8 py-3 !rounded-button shadow-lg hover:bg-primary/90 transition-all cursor-pointer">
         Book Now
       </button>
     </div>
@@ -501,7 +502,7 @@
       <div class="flex gap-x-6 w-full">
         <div class="bg-white rounded shadow-md p-4 mt-6 w-1/2">
           <h3 class="font-semibold mb-3 text-center">Additional Charges</h3>
-          <div class="flex flex-col gap-y-4 text-sm">
+          <div class="flex flex-col gap-y-4 text-sm h-[80%] justify-evenly">
             <div class="flex justify-between">
               <span>Night Charges (10 PM - 6 AM)</span>
               <span class="font-medium">+10%</span>
@@ -522,7 +523,7 @@
           </div>
         </div>
         <div class="bg-white rounded shadow-md p-4 mt-6 w-1/2">
-          <h3 class="font-semibold mb-3 text-center">Additional Charges</h3>
+          <h3 class="font-semibold mb-3 text-center">Free Complementary</h3>
           <div class="flex flex-col gap-y-4 text-sm">
             <div class="flex justify-between items-center">
               <span>Complimentary High-Speed Wi-Fi</span>
@@ -979,8 +980,9 @@
           <h2 class="text-2xl font-bold text-center mb-6">Contact Us</h2>
           <div class="bg-white rounded  overflow-hidden mb-6">
             <div class="h-48 bg-gray-200 relative">
-              <img src="https://public.readdy.ai/gen_page/map_placeholder_1280x720.png" alt="Map"
-                class="absolute inset-0 w-full h-full object-cover" />
+              <!-- <img src="https://public.readdy.ai/gen_page/map_placeholder_1280x720.png" alt="Map"
+                class="absolute inset-0 w-full h-full object-cover" /> -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3943.9243952271686!2d77.73843099999999!3d8.69873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zOMKwNDEnNTUuNCJOIDc3wrA0NCcxOC40IkU!5e0!3m2!1sen!2sin!4v1745942162851!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" class="absolute inset-0 w-full h-full object-cover" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div class="p-4 space-y-3">
               <div class="flex items-start">
@@ -989,9 +991,9 @@
                 </div>
                 <div>
                   <h3 class="font-medium text-sm">Address</h3>
-                  <p class="text-sm text-gray-700">
+                  <a href="https://maps.app.goo.gl/VPFZscrMN2P3Sz9H8" target="_blank" class="text-sm text-gray-700">
                     123 Main Street, Koramangala, Bangalore, Karnataka 560034
-                  </p>
+                  </a>
                 </div>
               </div>
               <div class="flex items-start">
