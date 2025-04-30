@@ -207,22 +207,21 @@
     .image-placeholder {
       width: 100%;
       height: 200px;
-      background-color: #ddd;
-      background-image: url('https://via.placeholder.com/400x200');
+      /* background-color: #ddd; */
+      /* background-image: url('./images/place-01.jpg'); */
       background-size: cover;
-      background-position: center;
+      background-position: top center;
     }
 
     .tour-item h3 {
       font-size: 1.2rem;
       margin-top: 10px;
-      color: #333;
+      color: #fed100;
     }
 
     .tour-item p {
       font-size: 1rem;
       margin-top: 5px;
-      color: #666;
       padding: 0 10px 10px 10px;
     }
 
@@ -288,17 +287,17 @@
               Services</a>
           </li>
           <li>
-            <a href="#0" id="openModalBtn"
+            <a href="#explore"
               class="block py-2 px-3 text-white rounded-sm hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-[#ffcb05] lg:p-0">Explore</a>
           </li>
           <li>
             <a href="#tariff"
               class="block py-2 px-3 text-white rounded-sm hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-[#ffcb05] lg:p-0">Tariff</a>
           </li>
-          <li>
+          <!-- <li>
             <a href="#gallery"
               class="block py-2 px-3 text-white rounded-sm hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-[#ffcb05] lg:p-0">Gallery</a>
-          </li>
+          </li> -->
           <li>
             <a href="#customerRe"
               class="block py-2 px-3 text-white rounded-sm hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-[#ffcb05] lg:p-0">Reviews</a>
@@ -318,7 +317,8 @@
   <section class="relative h-[500px] pt-[4.5rem] overflow-hidden">
     <div class="absolute inset-0 bg-black/40 z-10 mix-blend-overlay"></div>
     <div class="gif-container absolute inset-0">
-      <img src="./hero gif.gif" alt="Taxi in cityscape" class="w-full h-full object-cover" />
+      <img src="./hero gif.gif" alt="Taxi in cityscape" class="w-full h-full object-cover md:block hidden" />
+      <img src="./hero-mobile-gif.gif" alt="Taxi in cityscape2" class="w-full h-full object-cover block md:hidden" />
     </div>
     <div class="relative z-20 flex flex-col items-center justify-center h-full gap-y-4 px-6 text-center">
       <!-- <h1 class="logo text-4xl font-bold text-white mb-3">Bharani Cabs</h1>
@@ -517,19 +517,17 @@
     <div class="max-w-7xl mx-auto">
       <div class="owl-carousel" id="owl-carousel2">
         <div class="bg-white rounded shadow-md w-full max-w-md mx-auto overflow-hidden">
-          <img
-            src="https://readdy.ai/api/search-image?query=professional%20photograph%20of%20a%20modern%20sedan%20taxi%20car%2C%20yellow%20and%20black%20color%20scheme%2C%20side%20view%2C%20isolated%20on%20white%20background%2C%20studio%20lighting%2C%20high%20detail%2C%20commercial%20product%20photography&width=240&height=140&seq=8&orientation=landscape"
-            alt="Sedan" class="w-full h-36 object-cover" />
+          <img src="./images/tata_indica.png" alt="Indica" class="w-full h-36 object-cover" />
           <div class="p-4">
-            <h3 class="font-semibold mb-1">Economy Sedan</h3>
+            <h3 class="font-semibold mb-1">Mini</h3>
             <p class="text-sm text-gray-700 mb-2">Up to 4 passengers</p>
             <div class="flex justify-between mb-2">
               <span class="text-xs text-gray-600">Base Fare:</span>
-              <span class="text-sm font-medium">₹150</span>
+              <span class="text-sm font-medium">₹130</span>
             </div>
             <div class="flex justify-between mb-3">
               <span class="text-xs text-gray-600">Per KM:</span>
-              <span class="text-sm font-medium">₹12</span>
+              <span class="text-sm font-medium">₹13</span>
             </div>
             <button
               class="openBookingBtn w-full bg-primary text-secondary text-sm font-medium py-2 !rounded-button cursor-pointer">
@@ -539,15 +537,54 @@
         </div>
 
         <div class="bg-white rounded shadow-md w-full max-w-md mx-auto overflow-hidden">
-          <img
-            src="https://readdy.ai/api/search-image?query=professional%20photograph%20of%20a%20modern%20SUV%20taxi%20car%2C%20yellow%20and%20black%20color%20scheme%2C%20side%20view%2C%20isolated%20on%20white%20background%2C%20studio%20lighting%2C%20high%20detail%2C%20commercial%20product%20photography&width=240&height=140&seq=9&orientation=landscape"
-            alt="SUV" class="w-full h-36 object-cover" />
+          <img src="./images/honda_amaze.png" alt="Sedan" class="w-full h-36 object-cover" />
           <div class="p-4">
-            <h3 class="font-semibold mb-1">Premium SUV</h3>
+            <h3 class="font-semibold mb-1">Sedan</h3>
+            <p class="text-sm text-gray-700 mb-2">Up to 4 passengers</p>
+            <div class="flex justify-between mb-2">
+              <span class="text-xs text-gray-600">Base Fare:</span>
+              <span class="text-sm font-medium">₹130</span>
+            </div>
+            <div class="flex justify-between mb-3">
+              <span class="text-xs text-gray-600">Per KM:</span>
+              <span class="text-sm font-medium">₹13</span>
+            </div>
+            <button
+              class="openBookingBtn w-full bg-primary text-secondary text-sm font-medium py-2 !rounded-button cursor-pointer">
+              Book Now
+            </button>
+          </div>
+        </div>
+
+
+        <div class="bg-white rounded shadow-md w-full max-w-md mx-auto overflow-hidden">
+          <img src="./images/honda-city.png" alt="Luxury" class="w-full h-36 object-cover" />
+          <div class="p-4">
+            <h3 class="font-semibold mb-1">Premium Sedan</h3>
+            <p class="text-sm text-gray-700 mb-2">Up to 4 passengers</p>
+            <div class="flex justify-between mb-2">
+              <span class="text-xs text-gray-600">Base Fare:</span>
+              <span class="text-sm font-medium">₹160</span>
+            </div>
+            <div class="flex justify-between mb-3">
+              <span class="text-xs text-gray-600">Per KM:</span>
+              <span class="text-sm font-medium">₹16</span>
+            </div>
+            <button
+              class="openBookingBtn w-full bg-primary text-secondary text-sm font-medium py-2 !rounded-button cursor-pointer">
+              Book Now
+            </button>
+          </div>
+        </div>
+
+        <div class="bg-white rounded shadow-md w-full max-w-md mx-auto overflow-hidden">
+          <img src="./images/innova_toyota.png" alt="SUV" class="w-full h-36 object-cover" />
+          <div class="p-4">
+            <h3 class="font-semibold mb-1">SUV</h3>
             <p class="text-sm text-gray-700 mb-2">Up to 6 passengers</p>
             <div class="flex justify-between mb-2">
               <span class="text-xs text-gray-600">Base Fare:</span>
-              <span class="text-sm font-medium">₹250</span>
+              <span class="text-sm font-medium">₹180</span>
             </div>
             <div class="flex justify-between mb-3">
               <span class="text-xs text-gray-600">Per KM:</span>
@@ -560,17 +597,14 @@
           </div>
         </div>
 
-
         <div class="bg-white rounded shadow-md w-full max-w-md mx-auto overflow-hidden">
-          <img
-            src="https://readdy.ai/api/search-image?query=professional%20photograph%20of%20a%20modern%20luxury%20taxi%20car%2C%20yellow%20and%20black%20color%20scheme%2C%20side%20view%2C%20isolated%20on%20white%20background%2C%20studio%20lighting%2C%20high%20detail%2C%20commercial%20product%20photography&width=240&height=140&seq=10&orientation=landscape"
-            alt="Luxury" class="w-full h-36 object-cover" />
+          <img src="./images/innova-crysta.png" alt="Premium SUV" class="w-full h-36 object-cover" />
           <div class="p-4">
-            <h3 class="font-semibold mb-1">Luxury Sedan</h3>
-            <p class="text-sm text-gray-700 mb-2">Up to 4 passengers</p>
+            <h3 class="font-semibold mb-1">Premium SUV</h3>
+            <p class="text-sm text-gray-700 mb-2">Up to 6 passengers</p>
             <div class="flex justify-between mb-2">
               <span class="text-xs text-gray-600">Base Fare:</span>
-              <span class="text-sm font-medium">₹350</span>
+              <span class="text-sm font-medium">₹220</span>
             </div>
             <div class="flex justify-between mb-3">
               <span class="text-xs text-gray-600">Per KM:</span>
@@ -584,41 +618,17 @@
         </div>
 
         <div class="bg-white rounded shadow-md w-full max-w-md mx-auto overflow-hidden">
-          <img
-            src="https://readdy.ai/api/search-image?query=professional%20photograph%20of%20a%20modern%20SUV%20taxi%20car%2C%20yellow%20and%20black%20color%20scheme%2C%20side%20view%2C%20isolated%20on%20white%20background%2C%20studio%20lighting%2C%20high%20detail%2C%20commercial%20product%20photography&width=240&height=140&seq=9&orientation=landscape"
-            alt="Mini Van" class="w-full h-36 object-cover" />
+          <img src="./images/verna.png" alt="Luxury" class="w-full h-36 object-cover" />
           <div class="p-4">
-            <h3 class="font-semibold mb-1">Mini Van</h3>
-            <p class="text-sm text-gray-700 mb-2">Up to 8 passengers</p>
+            <h3 class="font-semibold mb-1">Luxury</h3>
+            <p class="text-sm text-gray-700 mb-2">Up to 3 passengers</p>
             <div class="flex justify-between mb-2">
               <span class="text-xs text-gray-600">Base Fare:</span>
-              <span class="text-sm font-medium">₹300</span>
+              <span class="text-sm font-medium">₹220</span>
             </div>
             <div class="flex justify-between mb-3">
               <span class="text-xs text-gray-600">Per KM:</span>
-              <span class="text-sm font-medium">₹20</span>
-            </div>
-            <button
-              class="openBookingBtn w-full bg-primary text-secondary text-sm font-medium py-2 !rounded-button cursor-pointer">
-              Book Now
-            </button>
-          </div>
-        </div>
-
-        <div class="bg-white rounded shadow-md w-full max-w-md mx-auto overflow-hidden">
-          <img
-            src="https://readdy.ai/api/search-image?query=professional%20photograph%20of%20a%20modern%20luxury%20taxi%20car%2C%20yellow%20and%20black%20color%20scheme%2C%20side%20view%2C%20isolated%20on%20white%20background%2C%20studio%20lighting%2C%20high%20detail%2C%20commercial%20product%20photography&width=240&height=140&seq=10&orientation=landscape"
-            alt="Minibus" class="w-full h-36 object-cover" />
-          <div class="p-4">
-            <h3 class="font-semibold mb-1">Premium Minibus</h3>
-            <p class="text-sm text-gray-700 mb-2">Up to 12 passengers</p>
-            <div class="flex justify-between mb-2">
-              <span class="text-xs text-gray-600">Base Fare:</span>
-              <span class="text-sm font-medium">₹450</span>
-            </div>
-            <div class="flex justify-between mb-3">
-              <span class="text-xs text-gray-600">Per KM:</span>
-              <span class="text-sm font-medium">₹25</span>
+              <span class="text-sm font-medium">₹22</span>
             </div>
             <button
               class="openBookingBtn w-full bg-primary text-secondary text-sm font-medium py-2 !rounded-button cursor-pointer">
@@ -632,60 +642,63 @@
 
 
     <!-- Additional Charges -->
-    <div class="max-w-4xl mx-auto overflow-x-hidden">
-      <div class="w-full">
-        <div class="bg-[#004875] text-white rounded shadow-md p-4 mt-6" data-aos="fade-right" data-aos-duration="1000">
-          <h3 class="font-semibold mb-3 text-center">Free Complementary</h3>
-          <div class="flex flex-col gap-y-4 text-sm">
-            <div class="flex justify-between items-center">
-              <span>Complimentary High-Speed Wi-Fi</span>
-              <div>
-                <img src="./wifi-icon.svg" class="w-6 h-fit" alt="wifi-icon">
+    <div class="overflow-x-hidden">
+      <div class="max-w-4xl mx-auto py-4">
+        <div class="w-full">
+          <div class="bg-[#004875] text-white rounded shadow-md p-4 mt-6" data-aos="fade-right"
+            data-aos-duration="1000">
+            <h3 class="font-semibold mb-3 text-center text-[#fed100]">Welcome Pack</h3>
+            <div class="flex flex-col gap-y-4 text-sm">
+              <div class="flex justify-between items-center">
+                <span>Complimentary High-Speed Wi-Fi</span>
+                <div>
+                  <img src="./wifi-icon.svg" class="w-6 h-fit" alt="wifi-icon">
+                </div>
               </div>
-            </div>
 
-            <div class="flex justify-between items-center">
-              <span>Daily Newspaper Service</span>
-              <div>
-                <img src="./newspaper-icon.svg" class="w-6 h-fit" alt="newspaper-icon">
+              <div class="flex justify-between items-center">
+                <span>Daily Newspaper Service</span>
+                <div>
+                  <img src="./newspaper-icon.svg" class="w-6 h-fit" alt="newspaper-icon">
+                </div>
               </div>
-            </div>
 
-            <div class="flex justify-between items-center">
-              <span>Assorted Premium Chocolates</span>
-              <div>
-                <img src="./candy-icon2.svg" class="w-8 h-fit" alt="candy-icon">
+              <div class="flex justify-between items-center">
+                <span>Assorted Premium Chocolates</span>
+                <div>
+                  <img src="./candy-icon2.svg" class="w-8 h-fit" alt="candy-icon">
+                </div>
               </div>
-            </div>
 
-            <div class="flex justify-between items-center">
-              <span>Fresh Bottled Drinking Water</span>
-              <div>
-                <img src="./water-bottle-icon.svg" class="w-6 h-fit" alt="water-bottle-icon">
+              <div class="flex justify-between items-center">
+                <span>Fresh Bottled Drinking Water</span>
+                <div>
+                  <img src="./water-bottle-icon.svg" class="w-6 h-fit" alt="water-bottle-icon">
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="bg-white rounded shadow-md p-4 mt-6" data-aos="fade-left" data-aos-duration="1000">
-          <h3 class="font-semibold mb-3 text-center">Additional Charges</h3>
-          <div class="flex flex-col gap-y-4 text-sm h-[80%] justify-evenly">
-            <div class="flex justify-between">
-              <span>Night Charges (10 PM - 6 AM)</span>
-              <span class="font-medium">+10%</span>
+          <div class="bg-white rounded shadow-md p-4 mt-6" data-aos="fade-left" data-aos-duration="1000">
+            <h3 class="font-semibold mb-3 text-center">Additional Charges</h3>
+            <div class="flex flex-col gap-y-4 text-sm h-[80%] justify-evenly">
+              <div class="flex justify-between">
+                <span>Night Charges (10 PM - 6 AM)</span>
+                <span class="font-medium">+10%</span>
+              </div>
+              <div class="flex justify-between">
+                <span>Waiting Charges (per hour)</span>
+                <span class="font-medium">₹100</span>
+              </div>
+              <div class="flex justify-between">
+                <span>Outstation Driver Allowance (per day)</span>
+                <span class="font-medium">₹300</span>
+              </div>
             </div>
-            <div class="flex justify-between">
-              <span>Waiting Charges (per hour)</span>
-              <span class="font-medium">₹100</span>
+            <div class="mt-4 text-center hidden">
+              <button class="bg-primary/10 text-secondary font-medium px-4 py-2 !rounded-button cursor-pointer">
+                Request Detailed Quote
+              </button>
             </div>
-            <div class="flex justify-between">
-              <span>Outstation Driver Allowance (per day)</span>
-              <span class="font-medium">₹300</span>
-            </div>
-          </div>
-          <div class="mt-4 text-center hidden">
-            <button class="bg-primary/10 text-secondary font-medium px-4 py-2 !rounded-button cursor-pointer">
-              Request Detailed Quote
-            </button>
           </div>
         </div>
       </div>
@@ -694,11 +707,11 @@
   </section>
 
   <!-- Gallery Section -->
-  <section class="container mx-auto py-10 bg-gray-50 px-4" id="gallery">
+  <section class="container mx-auto py-10 bg-gray-50 px-4" id="explore">
     <h2 class="text-2xl font-bold text-center mb-6">Explore</h2>
 
 
-    <div class="max-w-7xl mx-auto bg-[#f9f9f9] p-4 rounded shadow">
+    <div class="max-w-7xl mx-auto bg-[#f9f9f9] p-4 max-sm:p-2 rounded shadow">
       <!-- Tab Buttons -->
       <div class="flex space-x-4 overflow-x-auto">
         <button data-tab-button="tab1"
@@ -717,39 +730,44 @@
           <h2 class="text-xl font-semibold mb-2">TIRUNELVELI TOURIST SPOT</h2>
           <div class="tour-explore-container p-6 max-sm:px-2">
             <div class="grid 2xl:grid-cols-3 lg:grid-cols-3 grid-cols-1 gap-x-6 max-sm:gap-y-6">
-              <div class="tour-item openBookingBtn cursor-pointer">
-                <div class="image-placeholder"></div>
-                <h3>NELLAIAPPAR TEMPLE</h3>
-                <p>A major religious site dedicated to Lord Shiva and Goddess Parvati.</p>
+              <div class="tour-item openBookingBtn cursor-pointer bg-[#004875]">
+                <div class="image-placeholder bg-[url('/images/place-01.jpg')]"></div>
+                <h3 class="font-semibold">NELLAIAPPAR TEMPLE</h3>
+                <p class="text-white">A major religious site dedicated to Lord Shiva and Goddess Parvati.</p>
               </div>
-              <div class="tour-item openBookingBtn cursor-pointer">
-                <div class="image-placeholder"></div>
-                <h3>SALAIKUMARAN TEMPLE</h3>
-                <p>A popular Murugan temple in Tirunelveli Junction, known for its good maintenance.</p>
+              <div class="tour-item openBookingBtn cursor-pointer bg-[#004875]">
+                <div class="image-placeholder bg-[url('/images/place-02.jpg')]"></div>
+                <h3 class="font-semibold">SALAIKUMARAN TEMPLE</h3>
+                <p class="text-white">A popular Murugan temple in Tirunelveli Junction, known for its good maintenance.
+                </p>
               </div>
-              <div class="tour-item openBookingBtn cursor-pointer">
-                <div class="image-placeholder"></div>
-                <h3>SANKARAN KOVIL TEMPLE</h3>
-                <p>A unique temple dedicated to Sankaranarayana, a combined manifestation of Shiva and Vishnu.</p>
+              <div class="tour-item openBookingBtn cursor-pointer bg-[#004875]">
+                <div class="image-placeholder bg-[url('/images/place-03.jpg')]"></div>
+                <h3 class="font-semibold">SANKARAN KOVIL TEMPLE</h3>
+                <p class="text-white">A unique temple dedicated to Sankaranarayana, a combined manifestation of Shiva
+                  and Vishnu.</p>
               </div>
             </div>
 
             <div class="grid 2xl:grid-cols-3 lg:grid-cols-3 grid-cols-1 gap-x-6 max-sm:gap-y-6">
-              <div class="tour-item openBookingBtn cursor-pointer">
-                <div class="image-placeholder"></div>
-                <h3>UVARI</h3>
-                <p>Suyambulingaswamy Temple is a Siva temple and Unique Kappal Matha Church which is shaped like a ship
+              <div class="tour-item openBookingBtn cursor-pointer bg-[#004875]">
+                <div class="image-placeholder bg-[url('/images/place-04.jpg')]"></div>
+                <h3 class="font-semibold">UVARI</h3>
+                <p class="text-white">Suyambulingaswamy Temple is a Siva temple and Unique Kappal Matha Church which is
+                  shaped like a ship
                   with an airplane on top. </p>
               </div>
-              <div class="tour-item openBookingBtn cursor-pointer">
-                <div class="image-placeholder"></div>
-                <h3>MANIMUTHAR DAM, PAPANASAM DAM, AGASTHIYAR FALLS</h3>
-                <p>Explore serene dams surrounded by nature and enriched with ancient legends and spiritual charm.</p>
+              <div class="tour-item openBookingBtn cursor-pointer bg-[#004875]">
+                <div class="image-placeholder bg-[url('/images/place-05.jpg')]"></div>
+                <h3 class="font-semibold">MANIMUTHAR DAM, PAPANASAM DAM, AGASTHIYAR FALLS</h3>
+                <p class="text-white">Explore serene dams surrounded by nature and enriched with ancient legends and
+                  spiritual charm.</p>
               </div>
-              <div class="tour-item openBookingBtn cursor-pointer">
-                <div class="image-placeholder"></div>
-                <h3>KALAKKADU SANCTUARY</h3>
-                <p>Discover lush wildlife, scenic trails, and serene landscapes in Tamil Nadu's hidden gem, home to
+              <div class="tour-item openBookingBtn cursor-pointer bg-[#004875]">
+                <div class="image-placeholder bg-[url('/images/place-06.jpg')]"></div>
+                <h3 class="font-semibold">KALAKKADU SANCTUARY</h3>
+                <p class="text-white">Discover lush wildlife, scenic trails, and serene landscapes in Tamil Nadu's
+                  hidden gem, home to
                   tigers, elephants, and rare species.</p>
               </div>
             </div>
@@ -761,37 +779,40 @@
           <h2 class="text-xl font-semibold mb-2">THOOTHUKUDI TOURIST SPOT</h2>
           <div class="tour-explore-container">
             <div class="grid 2xl:grid-cols-3 lg:grid-cols-3 grid-cols-1 gap-x-6 max-sm:gap-y-6">
-              <div class="tour-item openBookingBtn cursor-pointer">
-                <div class="image-placeholder"></div>
-                <h3>TIRUCHENDUR MURUGAN TEMPLE</h3>
-                <p>One of the six Abodes of Murugan, located in Thoothukudi district.</p>
+              <div class="tour-item openBookingBtn cursor-pointer bg-[#004875]">
+                <div class="image-placeholder bg-[url('/images/place-07.jpg')]"></div>
+                <h3 class="font-semibold">TIRUCHENDUR MURUGAN TEMPLE</h3>
+                <p class="text-white">One of the six Abodes of Murugan, located in Thoothukudi district.</p>
               </div>
-              <div class="tour-item openBookingBtn cursor-pointer">
-                <div class="image-placeholder"></div>
-                <h3>ETTAYAPURAM</h3>
-                <p>Birthplace of the poet Subramania Bharathiyar, with historical and cultural sites.</p>
+              <div class="tour-item openBookingBtn cursor-pointer bg-[#004875]">
+                <div class="image-placeholder bg-[url('/images/place-08.jpg')]"></div>
+                <h3 class="font-semibold">ETTAYAPURAM</h3>
+                <p class="text-white">Birthplace of the poet Subramania Bharathiyar, with historical and cultural sites.
+                </p>
               </div>
-              <div class="tour-item openBookingBtn cursor-pointer">
-                <div class="image-placeholder"></div>
-                <h3>KAZHUGUMALAI JAIN TEMPLE</h3>
-                <p>A significant Jain temple with intricate carvings</p>
+              <div class="tour-item openBookingBtn cursor-pointer bg-[#004875]">
+                <div class="image-placeholder bg-[url('/images/place-09.jpg')]"></div>
+                <h3 class="font-semibold">KAZHUGUMALAI JAIN TEMPLE</h3>
+                <p class="text-white">A significant Jain temple with intricate carvings</p>
               </div>
             </div>
             <div class="grid 2xl:grid-cols-3 lg:grid-cols-3 grid-cols-1 gap-x-6 max-sm:gap-y-6">
-              <div class="tour-item openBookingBtn cursor-pointer">
-                <div class="image-placeholder"></div>
-                <h3>PANIMAYA MATHA CHURCH</h3>
-                <p>A historical church with Portuguese architectural influences.</p>
+              <div class="tour-item openBookingBtn cursor-pointer bg-[#004875]">
+                <div class="image-placeholder bg-[url('/images/place-10.jpg')]"></div>
+                <h3 class="font-semibold">PANIMAYA MATHA CHURCH</h3>
+                <p class="text-white">A historical church with Portuguese architectural influences.</p>
               </div>
-              <div class="tour-item openBookingBtn cursor-pointer">
-                <div class="image-placeholder"></div>
-                <h3>KULASAI MUTHARAMMAN</h3>
-                <p>The Mutharamman Temple is in Kulasekharapatnam near Thiruchendur in the Thoothukudi district.</p>
+              <div class="tour-item openBookingBtn cursor-pointer bg-[#004875]">
+                <div class="image-placeholder bg-[url('/images/place-11.jpg')]"></div>
+                <h3 class="font-semibold">KULASAI MUTHARAMMAN</h3>
+                <p class="text-white">The Mutharamman Temple is in Kulasekharapatnam near Thiruchendur in the
+                  Thoothukudi district.</p>
               </div>
-              <div class="tour-item openBookingBtn cursor-pointer">
-                <div class="image-placeholder"></div>
-                <h3>MANAPAD</h3>
-                <p>Manapad is a quiet coastal village with scenic beaches, historic churches, and safe waters perfect
+              <div class="tour-item openBookingBtn cursor-pointer bg-[#004875]">
+                <div class="image-placeholder bg-[url('/images/place-12.jpg')]"></div>
+                <h3 class="font-semibold">MANAPAD</h3>
+                <p class="text-white">Manapad is a quiet coastal village with scenic beaches, historic churches, and
+                  safe waters perfect
                   for
                   a peaceful, family-friendly getaway.</p>
               </div>
@@ -802,27 +823,29 @@
           <h2 class="text-xl font-semibold mb-2">TENKASI TOURIST SPOT</h2>
           <div class="tour-explore-container">
             <div class="grid 2xl:grid-cols-3 lg:grid-cols-3 grid-cols-1 gap-x-6 max-sm:gap-y-6">
-              <div class="tour-item openBookingBtn cursor-pointer">
-                <div class="image-placeholder"></div>
-                <h3>KASI VISHWANATHAR TEMPLE</h3>
-                <p>A major temple known as the "Kasi (Varanasi) of the South," located in Tenkasi.</p>
+              <div class="tour-item openBookingBtn cursor-pointer bg-[#004875]">
+                <div class="image-placeholder bg-[url('/images/place-13.jpg')]"></div>
+                <h3 class="font-semibold">KASI VISHWANATHAR TEMPLE</h3>
+                <p class="text-white">A major temple known as the "Kasi (Varanasi) of the South," located in Tenkasi.
+                </p>
               </div>
-              <div class="tour-item openBookingBtn cursor-pointer">
-                <div class="image-placeholder"></div>
-                <h3>KUTRALEESHWARAR TEMPLE (CHITRA SABHA)</h3>
-                <p>A temple associated with Lord Nataraja and renowned for its architecture.</p>
+              <div class="tour-item openBookingBtn cursor-pointer bg-[#004875]">
+                <div class="image-placeholder bg-[url('/images/place-14.jpg')]"></div>
+                <h3 class="font-semibold">KUTRALEESHWARAR TEMPLE (CHITRA SABHA)</h3>
+                <p class="text-white">A temple associated with Lord Nataraja and renowned for its architecture.</p>
               </div>
-              <div class="tour-item openBookingBtn cursor-pointer">
-                <div class="image-placeholder"></div>
-                <h3>KUTRALAM FALLS</h3>
-                <p>A series of waterfalls, a popular destination for its natural beauty and cool climate.</p>
+              <div class="tour-item openBookingBtn cursor-pointer bg-[#004875]">
+                <div class="image-placeholder bg-[url('/images/place-15.jpg')]"></div>
+                <h3 class="font-semibold">KUTRALAM FALLS</h3>
+                <p class="text-white">A series of waterfalls, a popular destination for its natural beauty and cool
+                  climate.</p>
               </div>
             </div>
             <div class="grid 2xl:grid-cols-3 lg:grid-cols-3 grid-cols-1 gap-x-6 max-sm:gap-y-6">
-              <div class="tour-item openBookingBtn cursor-pointer">
-                <div class="image-placeholder"></div>
-                <h3>THRILL PARK</h3>
-                <p>A fun park with various adventure activities.</p>
+              <div class="tour-item openBookingBtn cursor-pointer bg-[#004875]">
+                <div class="image-placeholder bg-[url('/images/place-16.jpg')]"></div>
+                <h3 class="font-semibold">THRILL PARK</h3>
+                <p class="text-white">A fun park with various adventure activities.</p>
               </div>
             </div>
           </div>
@@ -831,37 +854,41 @@
           <h2 class="text-xl font-semibold mb-2">KANNIYAKUMARI TOURIST SPOT</h2>
           <div class="tour-explore-container">
             <div class="grid 2xl:grid-cols-3 lg:grid-cols-3 grid-cols-1 gap-x-6 max-sm:gap-y-6">
-              <div class="tour-item openBookingBtn cursor-pointer">
-                <div class="image-placeholder"></div>
-                <h3>VIVEKANANDA ROCK MEMORIAL</h3>
-                <p>A significant memorial located on a rocky island in the sea, offering stunning views.</p>
+              <div class="tour-item openBookingBtn cursor-pointer bg-[#004875]">
+                <div class="image-placeholder bg-[url('/images/place-16.jpg')]"></div>
+                <h3 class="font-semibold">VIVEKANANDA ROCK MEMORIAL</h3>
+                <p class="text-white">A significant memorial located on a rocky island in the sea, offering stunning
+                  views.</p>
               </div>
-              <div class="tour-item openBookingBtn cursor-pointer">
-                <div class="image-placeholder"></div>
-                <h3>STATUE OF THIRUVALLUVAR</h3>
-                <p>A colossal statue of the renowned Tamil poet, located near the Vivekananda Rock Memorial.</p>
+              <div class="tour-item openBookingBtn cursor-pointer bg-[#004875]">
+                <div class="image-placeholder bg-[url('/images/place-17.jpg')]"></div>
+                <h3 class="font-semibold">STATUE OF THIRUVALLUVAR</h3>
+                <p class="text-white">A colossal statue of the renowned Tamil poet, located near the Vivekananda Rock
+                  Memorial.</p>
               </div>
-              <div class="tour-item openBookingBtn cursor-pointer">
-                <div class="image-placeholder"></div>
-                <h3>KANYAKUMARI BEACH</h3>
-                <p>A scenic beach with stunning sunrises and sunsets at the meeting point of three oceans.</p>
+              <div class="tour-item openBookingBtn cursor-pointer bg-[#004875]">
+                <div class="image-placeholder bg-[url('/images/place-18.jpg')]"></div>
+                <h3 class="font-semibold">KANYAKUMARI BEACH</h3>
+                <p class="text-white">A scenic beach with stunning sunrises and sunsets at the meeting point of three
+                  oceans.</p>
               </div>
             </div>
             <div class="grid 2xl:grid-cols-3 lg:grid-cols-3 grid-cols-1 gap-x-6 max-sm:gap-y-6">
-              <div class="tour-item openBookingBtn cursor-pointer">
-                <div class="image-placeholder"></div>
-                <h3>BHAGAVATHI AMMAN TEMPLE</h3>
-                <p>A prominent Hindu temple dedicated to Goddess Kanniyakumari Amman.</p>
+              <div class="tour-item openBookingBtn cursor-pointer bg-[#004875]">
+                <div class="image-placeholder bg-[url('/images/place-19.jpg')]"></div>
+                <h3 class="font-semibold">BHAGAVATHI AMMAN TEMPLE</h3>
+                <p class="text-white">A prominent Hindu temple dedicated to Goddess Kanniyakumari Amman.</p>
               </div>
-              <div class="tour-item openBookingBtn cursor-pointer">
-                <div class="image-placeholder"></div>
-                <h3>PECHIPARAI</h3>
-                <p>The largest dam in Kanyakumari district, is located in the Western Ghats, 43 km from Nagercoil.</p>
+              <div class="tour-item openBookingBtn cursor-pointer bg-[#004875]">
+                <div class="image-placeholder bg-[url('/images/place-20.jpg')]"></div>
+                <h3 class="font-semibold">PECHIPARAI</h3>
+                <p class="text-white">The largest dam in Kanyakumari district, is located in the Western Ghats, 43 km
+                  from Nagercoil.</p>
               </div>
-              <div class="tour-item openBookingBtn cursor-pointer">
-                <div class="image-placeholder"></div>
-                <h3>SANGUTHURAI BEACH</h3>
-                <p>A beautiful beach known for its scenic beauty and calm waters.</p>
+              <div class="tour-item openBookingBtn cursor-pointer bg-[#004875]">
+                <div class="image-placeholder bg-[url('/images/place-21.jpg')]"></div>
+                <h3 class="font-semibold">SANGUTHURAI BEACH</h3>
+                <p class="text-white">A beautiful beach known for its scenic beauty and calm waters.</p>
               </div>
             </div>
           </div>
@@ -870,27 +897,29 @@
           <h2 class="text-xl font-semibold mb-2">MADURAI TOURIST SPOT</h2>
           <div class="tour-explore-container">
             <div class="grid 2xl:grid-cols-3 lg:grid-cols-3 grid-cols-1 gap-x-6 max-sm:gap-y-6">
-              <div class="tour-item openBookingBtn cursor-pointer">
-                <div class="image-placeholder"></div>
-                <h3>SRI MEENAKSHI SUNDARESWARAR TEMPLE</h3>
-                <p>A famous temple in Tamil Nadu, known for its intricate architecture and religious significance.</p>
+              <div class="tour-item openBookingBtn cursor-pointer bg-[#004875]">
+                <div class="image-placeholder bg-[url('/images/place-22.jpg')]"></div>
+                <h3 class="font-semibold">SRI MEENAKSHI SUNDARESWARAR TEMPLE</h3>
+                <p class="text-white">A famous temple in Tamil Nadu, known for its intricate architecture and religious
+                  significance.</p>
               </div>
-              <div class="tour-item openBookingBtn cursor-pointer">
-                <div class="image-placeholder"></div>
-                <h3>AZHAGAR KOVIL</h3>
-                <p>A Vishnu temple dedicated to Lord Alagar, located northeast of Madurai.</p>
+              <div class="tour-item openBookingBtn cursor-pointer bg-[#004875]">
+                <div class="image-placeholder bg-[url('/images/place-23.jpg')]"></div>
+                <h3 class="font-semibold">AZHAGAR KOVIL</h3>
+                <p class="text-white">A Vishnu temple dedicated to Lord Alagar, located northeast of Madurai.</p>
               </div>
-              <div class="tour-item openBookingBtn cursor-pointer">
-                <div class="image-placeholder"></div>
-                <h3>THIRUMALAI NAYAK PALACE</h3>
-                <p>A historical landmark showcasing Indo-Saracenic architecture.</p>
+              <div class="tour-item openBookingBtn cursor-pointer bg-[#004875]">
+                <div class="image-placeholder bg-[url('/images/place-24.jpg')]"></div>
+                <h3 class="font-semibold">THIRUMALAI NAYAK PALACE</h3>
+                <p class="text-white">A historical landmark showcasing Indo-Saracenic architecture.</p>
               </div>
             </div>
             <div class="grid 2xl:grid-cols-3 lg:grid-cols-3 grid-cols-1 gap-x-6 max-sm:gap-y-6">
-              <div class="tour-item openBookingBtn cursor-pointer">
-                <div class="image-placeholder"></div>
-                <h3>GANDHI MUSEUM</h3>
-                <p>Located in the old palace of Rani Mangammal, it showcases Gandhi's life and work.</p>
+              <div class="tour-item openBookingBtn cursor-pointer bg-[#004875]">
+                <div class="image-placeholder bg-[url('/images/place-25.jpg')]"></div>
+                <h3 class="font-semibold">GANDHI MUSEUM</h3>
+                <p class="text-white">Located in the old palace of Rani Mangammal, it showcases Gandhi's life and work.
+                </p>
               </div>
             </div>
           </div>
@@ -899,37 +928,38 @@
           <h2 class="text-xl font-semibold mb-2">VIRUDHUNAGAR TOURIST SPOT</h2>
           <div class="tour-explore-container">
             <div class="grid 2xl:grid-cols-3 lg:grid-cols-3 grid-cols-1 gap-x-6 max-sm:gap-y-6">
-              <div class="tour-item openBookingBtn cursor-pointer">
-                <div class="image-placeholder"></div>
-                <h3>IRUKKANKUDI MARRIAMMAN TEMPLE</h3>
-                <p>A temple located between the Arjuna and Vaipparu rivers.</p>
+              <div class="tour-item openBookingBtn cursor-pointer bg-[#004875]">
+                <div class="image-placeholder bg-[url('/images/place-26.jpg')]"></div>
+                <h3 class="font-semibold">IRUKKANKUDI MARRIAMMAN TEMPLE</h3>
+                <p class="text-white">A temple located between the Arjuna and Vaipparu rivers.</p>
               </div>
-              <div class="tour-item openBookingBtn cursor-pointer">
-                <div class="image-placeholder"></div>
-                <h3>SANJEEVI MALAI</h3>
-                <p>A significant hill with historical and religious importance, located in Rajapalayam.</p>
+              <div class="tour-item openBookingBtn cursor-pointer bg-[#004875]">
+                <div class="image-placeholder bg-[url('/images/place-27.jpg')]"></div>
+                <h3 class="font-semibold">SANJEEVI MALAI</h3>
+                <p class="text-white">A significant hill with historical and religious importance, located in
+                  Rajapalayam.</p>
               </div>
-              <div class="tour-item openBookingBtn cursor-pointer">
-                <div class="image-placeholder"></div>
-                <h3>SATHURAGIRI SHIVA TEMPLE & FALLS</h3>
-                <p>A revered religious site and A popular waterfall destination.</p>
+              <div class="tour-item openBookingBtn cursor-pointer bg-[#004875]">
+                <div class="image-placeholder bg-[url('/images/place-28.jpg')]"></div>
+                <h3 class="font-semibold">SATHURAGIRI SHIVA TEMPLE & FALLS</h3>
+                <p class="text-white">A revered religious site and A popular waterfall destination.</p>
               </div>
             </div>
             <div class="grid 2xl:grid-cols-3 lg:grid-cols-3 grid-cols-1 gap-x-6 max-sm:gap-y-6">
-              <div class="tour-item openBookingBtn cursor-pointer">
-                <div class="image-placeholder"></div>
-                <h3>ANDAL RENGA MANNAR TEMPLE</h3>
-                <p>Important religious site.</p>
+              <div class="tour-item openBookingBtn cursor-pointer bg-[#004875]">
+                <div class="image-placeholder bg-[url('/images/place-29.jpg')]"></div>
+                <h3 class="font-semibold">ANDAL RENGA MANNAR TEMPLE</h3>
+                <p class="text-white">Important religious site.</p>
               </div>
-              <div class="tour-item openBookingBtn cursor-pointer">
-                <div class="image-placeholder"></div>
-                <h3>KENI FALLS & KOTTAMALAI FALLS</h3>
-                <p>A natural waterfall attracting visitors.</p>
+              <div class="tour-item openBookingBtn cursor-pointer bg-[#004875]">
+                <div class="image-placeholder bg-[url('/images/place-30.jpg')]"></div>
+                <h3 class="font-semibold">KENI FALLS & KOTTAMALAI FALLS</h3>
+                <p class="text-white">A natural waterfall attracting visitors.</p>
               </div>
-              <div class="tour-item openBookingBtn cursor-pointer">
-                <div class="image-placeholder"></div>
-                <h3>GRIZZLED SQUIRREL WILDLIFE SANCTUARY</h3>
-                <p>A place for nature lovers and wildlife enthusiasts.</p>
+              <div class="tour-item openBookingBtn cursor-pointer bg-[#004875]">
+                <div class="image-placeholder bg-[url('/images/place-31.jpg')]"></div>
+                <h3 class="font-semibold">GRIZZLED SQUIRREL WILDLIFE SANCTUARY</h3>
+                <p class="text-white">A place for nature lovers and wildlife enthusiasts.</p>
               </div>
             </div>
           </div>
@@ -1088,19 +1118,19 @@
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div class="p-4 space-y-3">
-              <div class="flex items-start">
-                <div class="w-8 h-8 flex items-center justify-center mr-3 text-primary bg-[#004875] rounded">
+              <div class="flex items-center">
+                <div class="p-2 py-3 flex items-center justify-center mr-3 text-primary bg-[#004875] rounded">
                   <i class="ri-map-pin-line ri-lg"></i>
                 </div>
                 <div>
                   <h3 class="font-medium text-sm">Address</h3>
                   <a href="https://maps.app.goo.gl/VPFZscrMN2P3Sz9H8" target="_blank" class="text-sm text-gray-700">
-                    123 Main Street, Koramangala, Bangalore, Karnataka 560034
+                    STC College Road, Thirunelveli
                   </a>
                 </div>
               </div>
-              <div class="flex items-start">
-                <div class="w-8 h-8 flex items-center justify-center mr-3 text-primary bg-[#004875] rounded">
+              <div class="flex items-center">
+                <div class="p-2 py-3 flex items-center justify-center mr-3 text-primary bg-[#004875] rounded">
                   <i class="ri-phone-line ri-lg"></i>
                 </div>
                 <div>
@@ -1110,8 +1140,8 @@
                   </p>
                 </div>
               </div>
-              <div class="flex items-start">
-                <div class="w-8 h-8 flex items-center justify-center mr-3 text-primary bg-[#004875] rounded">
+              <div class="flex items-center">
+                <div class="p-2 py-3 flex items-center justify-center mr-3 text-primary bg-[#004875] rounded">
                   <i class="ri-mail-line ri-lg"></i>
                 </div>
                 <div>
@@ -1121,8 +1151,8 @@
                   </p>
                 </div>
               </div>
-              <div class="flex items-start">
-                <div class="w-8 h-8 flex items-center justify-center mr-3 text-primary bg-[#004875] rounded">
+              <div class="flex items-center">
+                <div class="p-2 py-3 flex items-center justify-center mr-3 text-primary bg-[#004875] rounded">
                   <i class="ri-time-line ri-lg"></i>
                 </div>
                 <div>
@@ -1182,7 +1212,7 @@
                 placeholder="Enter pickup/drop location, date, time, etc."></textarea>
             </div>
             <button type="submit"
-              class="w-full text-white font-semibold py-3 rounded-md bg-[#004875] border border-[#004875] hover:text-white hover:bg-[#fed100] hover:border-[#fed100] transition-all ease-in-out duration-300">
+              class="w-full text-white font-semibold py-3 rounded-md bg-[#004875] border border-[#004875] hover:text-[#004875] hover:bg-[#fed100] hover:border-[#fed100] transition-all ease-in-out duration-300">
               Submit Enquiry
             </button>
             <div class="mt-4 text-center">
@@ -1328,7 +1358,7 @@
         <!-- Submit -->
         <div class="pt-2">
           <button type="submit"
-            class="w-full text-white font-semibold py-3 rounded-md bg-[#004875] border border-[#004875] hover:text-white hover:bg-[#fed100] hover:border-[#fed100] transition-all ease-in-out duration-300">
+            class="w-full text-white font-semibold py-3 rounded-md bg-[#004875] border border-[#004875] hover:text-[#004875] hover:bg-[#fed100] hover:border-[#fed100] transition-all ease-in-out duration-300">
             Confirm Booking
           </button>
         </div>
@@ -1358,53 +1388,6 @@
       </button>
     </div>
   </div>
-
-  <!-- Modal Background -->
-  <div id="modalBackdrop" class="fixed inset-0 bg-black bg-opacity-50 hidden z-40"></div>
-
-  <!-- Modal -->
-  <div id="exploreModal"
-    class="fixed inset-0 flex items-center justify-center max-sm:justify-end overflow-y-scroll z-50 hidden">
-    <div class="bg-white rounded-lg shadow-lg w-full max-w-7xl p-4 relative max-sm:top-[28rem] md:top-28 lg:static">
-      <!-- Close Button -->
-      <div class="flex justify-between">
-        <span>Explore</span>
-        <button id="closeModalBtn"><i class="ri-close-line"></i></button>
-      </div>
-
-      <!-- Modal Content -->
-      <div class="w-full">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-4 place-items-center gap-y-6">
-          <img src="./explore-img1.png" class="h-96 w-fit" alt="explore-img1">
-          <img src="./explore-img2.png" class="h-96 w-fit" alt="explore-img2">
-          <img src="./explore-img3.png" class="h-96 w-fit" alt="explore-img3">
-          <img src="./explore-img4.png" class="h-fit w-fit" alt="explore-img4">
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    const openModalBtn = document.getElementById('openModalBtn');
-    const closeModalBtn = document.getElementById('closeModalBtn');
-    const modal = document.getElementById('exploreModal');
-    const backdrop = document.getElementById('modalBackdrop');
-
-    openModalBtn.addEventListener('click', () => {
-      modal.classList.remove('hidden');
-      backdrop.classList.remove('hidden');
-    });
-
-    closeModalBtn.addEventListener('click', () => {
-      modal.classList.add('hidden');
-      backdrop.classList.add('hidden');
-    });
-
-    backdrop.addEventListener('click', () => {
-      modal.classList.add('hidden');
-      backdrop.classList.add('hidden');
-    });
-  </script>
 
   <!-- Owl Carousel JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
@@ -1478,18 +1461,19 @@
       const navLinks = navMenu.querySelectorAll("a");
 
       // Toggle on button click
-      toggleBtn.addEventListener("click", function () {
+      toggleBtn.addEventListener("click", function (e) {
+        e.stopPropagation(); // Prevent bubbling to document
         navMenu.classList.toggle("hidden");
       });
 
-      // Nav link click
+      // Nav link click — set active + close menu
       navLinks.forEach(link => {
         link.addEventListener("click", () => {
           // Set active class
           navLinks.forEach(l => {
-            l.classList.remove("text-[#ffcb05]", "font-semibold"); // Remove active styles
+            l.classList.remove("text-[#ffcb05]", "font-semibold");
           });
-          link.classList.add("text-[#ffcb05]", "font-semibold"); // Add active styles to clicked link
+          link.classList.add("text-[#ffcb05]", "font-semibold");
 
           // Close menu on mobile/tablet
           if (window.innerWidth < 1024) {
@@ -1497,8 +1481,21 @@
           }
         });
       });
+
+      // Close menu on click outside (only when open and screen <1024)
+      document.addEventListener("click", function (e) {
+        const isClickInsideMenu = navMenu.contains(e.target);
+        const isClickOnToggle = toggleBtn.contains(e.target);
+
+        if (!isClickInsideMenu && !isClickOnToggle && window.innerWidth < 1024) {
+          if (!navMenu.classList.contains("hidden")) {
+            navMenu.classList.add("hidden");
+          }
+        }
+      });
     });
   </script>
+
 
   <script>
     $(document).ready(function () {
