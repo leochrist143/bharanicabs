@@ -1,0 +1,59 @@
+.ml10 {
+    position: absolute;
+    padding-inline: 5px;
+    font-family: 'Poppins', sans-serif;
+    color: aliceblue;
+  }
+
+  .word {
+    display: inline-block;
+    white-space: nowrap; /* keeps word from splitting across lines */
+    margin-right: 0px;
+  }
+  
+  .letter {
+    display: inline-block;
+  }
+  
+  /* 320px to 395px */
+  @media (min-width: 320px) and (max-width: 395px) {
+    .ml10 {
+      top: 24%;
+      font-size: 16px;
+    }
+  }
+  
+  /* 396px to 580px */
+  @media (min-width: 396px) and (max-width: 580px) {
+    .ml10 {
+      top: 20%;
+      font-size: 19px;
+    }
+  }
+  
+  /* 581px to 710px */
+  @media (min-width: 581px) and (max-width: 710px) {
+    .ml10 {
+      top: 9%;
+      font-size: 29px;
+    }
+  }
+  
+  /* 711px to 800px */
+  @media (min-width: 711px) and (max-width: 800px) {
+    .ml10 {
+      top: 11%;
+      font-size: 24.5px;
+      font-weight: 400;
+    }
+  }
+  
+  /* 801px and above */
+  @media (min-width: 801px) {
+    .ml10 {
+      top: 19%;
+      font-size: 22.5px;
+      font-weight: 400;
+    }
+  }
+  

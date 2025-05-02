@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bharani Cabs - Beyond Destinations</title>
   <link rel="shortcut icon" href="./bc-logo.svg" type="image/x-icon">
+  <link rel="stylesheet" href="./css/font-anime.css">
   <script src="https://cdn.tailwindcss.com/3.4.16"></script>
   <script>
     tailwind.config = {
@@ -75,6 +76,10 @@
       }
     }
 
+    .tour-item{
+      display: flex;
+      flex-direction: column;
+    }
     .min-w-full {
       min-width: 100%;
     }
@@ -215,7 +220,7 @@
 
     .tour-item h3 {
       font-size: 1.2rem;
-      margin-top: 10px;
+      /* margin-top: 10px; */
       color: #fed100;
     }
 
@@ -236,6 +241,28 @@
       transform: translateY(0);
       transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
     }
+
+    /* font-animation */
+    .ml10 {
+  /* position: relative; */
+  /* font-weight: 600; */
+  /* font-size: 2em; */
+}
+
+.ml10 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.2em;
+  padding-right: 0.05em;
+  padding-bottom: 0.1em;
+  overflow: hidden;
+}
+
+.ml10 .letter {
+  display: inline-block;
+  line-height: 1em;
+  transform-origin: 0 0;
+}
   </style>
 </head>
 
@@ -325,12 +352,19 @@
       <p class="text-white text-xl font-medium mb-8">
         Ride Safe. Ride Smart.
       </p> -->
+      <h1 class="ml10">
+        <span class="text-wrapper">
+          <span class="letters">Reliable rides for city travel, tours, airport drops & corporate needs</span>
+        </span>
+      </h1>
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
       <div class="flex flex-col justify-center">
         <img src="./images/icons/name-01.svg" class="w-fit h-[9.5rem]" alt="bharani-home-logo">
         <!-- <img src="./Final_1.png" class="h-20 max-sm:h-fit w-fit mx-auto" alt="bharani-home-logo"> -->
       </div>
       <button
-        class="openBookingBtn bg-[#004875] hover:border-[#004875] hover:border hover:text-[#004875]  text-white font-semibold px-8 py-3 !rounded-button shadow-lg hover:bg-primary/90 transition-all cursor-pointer">
+        class="openBookingBtn bg-[#004875] hover:border-[#004875] hover:border hover:text-[#004875]  text-white font-semibold px-8 py-3 !rounded-button shadow-lg hover:bg-primary/90 transition-all cursor-pointer mt-[-1rem]">
         Book Now
       </button>
     </div>
@@ -520,7 +554,7 @@
     <div class="max-w-7xl mx-auto">
       <div class="owl-carousel" id="owl-carousel2">
         <div class="bg-white rounded shadow-md w-full max-w-md mx-auto overflow-hidden">
-          <img src="./images/tata_indica.png" alt="Indica" class="w-full h-36 object-cover" />
+          <img src="./images/cars/1 mini glanza.png" alt="Indica" class="w-full h-36 object-cover" />
           <div class="p-4">
             <h3 class="font-semibold mb-1">Mini</h3>
             <p class="text-sm text-gray-700 mb-2">Up to 4 passengers</p>
@@ -540,7 +574,7 @@
         </div>
 
         <div class="bg-white rounded shadow-md w-full max-w-md mx-auto overflow-hidden">
-          <img src="./images/honda_amaze.png" alt="Sedan" class="w-full h-36 object-cover" />
+          <img src="./images/cars/2 seden amaze.png" alt="Sedan" class="w-full h-36 object-cover" />
           <div class="p-4">
             <h3 class="font-semibold mb-1">Sedan</h3>
             <p class="text-sm text-gray-700 mb-2">Up to 4 passengers</p>
@@ -561,7 +595,7 @@
 
 
         <div class="bg-white rounded shadow-md w-full max-w-md mx-auto overflow-hidden">
-          <img src="./images/honda-city.png" alt="Luxury" class="w-full h-36 object-cover" />
+          <img src="./images/cars/3 premium seden maruti ciaz.png" alt="Luxury" class="w-full h-36 object-cover" />
           <div class="p-4">
             <h3 class="font-semibold mb-1">Premium Sedan</h3>
             <p class="text-sm text-gray-700 mb-2">Up to 4 passengers</p>
@@ -581,7 +615,7 @@
         </div>
 
         <div class="bg-white rounded shadow-md w-full max-w-md mx-auto overflow-hidden">
-          <img src="./images/innova_toyota.png" alt="SUV" class="w-full h-36 object-cover" />
+          <img src="./images/cars/4 suv toyota innova.png" alt="SUV" class="w-full h-36 object-cover" />
           <div class="p-4">
             <h3 class="font-semibold mb-1">SUV</h3>
             <p class="text-sm text-gray-700 mb-2">Up to 6 passengers</p>
@@ -601,7 +635,7 @@
         </div>
 
         <div class="bg-white rounded shadow-md w-full max-w-md mx-auto overflow-hidden">
-          <img src="./images/innova-crysta.png" alt="Premium SUV" class="w-full h-36 object-cover" />
+          <img src="./images/cars/5 premium suvtoyota innova crysta.png" alt="Premium SUV" class="w-full h-36 object-cover" />
           <div class="p-4">
             <h3 class="font-semibold mb-1">Premium SUV</h3>
             <p class="text-sm text-gray-700 mb-2">Up to 6 passengers</p>
@@ -621,7 +655,7 @@
         </div>
 
         <div class="bg-white rounded shadow-md w-full max-w-md mx-auto overflow-hidden">
-          <img src="./images/verna.png" alt="Luxury" class="w-full h-36 object-cover" />
+          <img src="./images/verna.png" alt="Luxury" class="w-full h-36 object-cover transform -scale-x-100" />
           <div class="p-4">
             <h3 class="font-semibold mb-1">Luxury</h3>
             <p class="text-sm text-gray-700 mb-2">Up to 3 passengers</p>
@@ -669,14 +703,14 @@
               <div class="flex justify-between items-center">
                 <span>Assorted Premium Chocolates</span>
                 <div>
-                  <img src="./candy-icon2.svg" class="w-8 h-fit" alt="candy-icon">
+                  <img src="./chocolate.svg" class="w-8 h-fit" alt="candy-icon">
                 </div>
               </div>
 
               <div class="flex justify-between items-center">
                 <span>Fresh Bottled Drinking Water</span>
                 <div>
-                  <img src="./water-bottle-icon.svg" class="w-6 h-fit" alt="water-bottle-icon">
+                  <img src="./water bottle.svg" class="w-[2rem] h-fit" alt="water-bottle-icon">
                 </div>
               </div>
             </div>
@@ -730,21 +764,21 @@
       <!-- Tab Content -->
       <div class="mt-4">
         <div data-tab-content="tab1" class="transition-opacity duration-500">
-          <h2 class="text-xl font-semibold mb-2">TIRUNELVELI TOURIST SPOT</h2>
+          <!-- <h2 class="text-xl font-semibold mb-2">TIRUNELVELI TOURIST SPOT</h2> -->
           <div class="tour-explore-container p-6 max-sm:px-2">
             <div class="grid 2xl:grid-cols-3 lg:grid-cols-3 grid-cols-1 gap-x-6 max-sm:gap-y-6">
               <div class="tour-item openBookingBtn cursor-pointer bg-[#004875]">
-                <div class="image-placeholder bg-[url('./images/place-01.jpg')]"></div>
+                <div class="image-placeholder bg-[url('./images/places/1.NellaiapparTemple.jpg.png')]"></div>
                 <h3 class="font-semibold my-auto">NELLAIAPPAR TEMPLE</h3>
                 <!-- <p class="text-white">A major religious site dedicated to Lord Shiva and Goddess Parvati.</p> -->
               </div>
               <div class="tour-item openBookingBtn cursor-pointer bg-[#004875]">
-                <div class="image-placeholder bg-[url('./images/place-02.jpg')]"></div>
+                <div class="image-placeholder bg-[url('./images/places/2.SalaikumaranTemple.jpg')]"></div>
                 <h3 class="font-semibold my-auto">SALAIKUMARAN TEMPLE</h3>
                 <!-- <p class="text-white">A popular Murugan temple in Tirunelveli Junction, known for its good maintenance.</p> -->
               </div>
               <div class="tour-item openBookingBtn cursor-pointer bg-[#004875]">
-                <div class="image-placeholder bg-[url('./images/place-03.jpg')]"></div>
+                <div class="image-placeholder bg-[url('./images/places/3.SankaranKovilTemple.jpg')]"></div>
                 <h3 class="font-semibold my-auto">SANKARAN KOVIL TEMPLE</h3>
                 <!-- <p class="text-white">A unique temple dedicated to Sankaranarayana, a combined manifestation of Shivaand Vishnu.</p> -->
               </div>
@@ -752,20 +786,20 @@
 
             <div class="grid 2xl:grid-cols-3 lg:grid-cols-3 grid-cols-1 gap-x-6 max-sm:gap-y-6">
               <div class="tour-item openBookingBtn cursor-pointer bg-[#004875]">
-                <div class="image-placeholder bg-[url('./images/place-04.jpg')]"></div>
+                <div class="image-placeholder bg-[url('./images/places/4.Uvari.jpg')]"></div>
                 <h3 class="font-semibold my-auto">UVARI</h3>
                 <!-- <p class="text-white">Suyambulingaswamy Temple is a Siva temple and Unique Kappal Matha Church which is
                   shaped like a ship
                   with an airplane on top. </p> -->
               </div>
               <div class="tour-item openBookingBtn cursor-pointer bg-[#004875]">
-                <div class="image-placeholder bg-[url('./images/place-05.jpg')]"></div>
+                <div class="image-placeholder bg-[url('./images/places/5.manimuthardamagastiarfallspapanasamdam.jpg')]"></div>
                 <h3 class="font-semibold my-auto">MANIMUTHAR DAM, PAPANASAM DAM, AGASTHIYAR FALLS</h3>
                 <!-- <p class="text-white">Explore serene dams surrounded by nature and enriched with ancient legends and
                   spiritual charm.</p> -->
               </div>
               <div class="tour-item openBookingBtn cursor-pointer bg-[#004875]">
-                <div class="image-placeholder bg-[url('./images/place-06.jpg')]"></div>
+                <div class="image-placeholder bg-[url('./images/places/6.KalakkaduSanctuary.jpg')]"></div>
                 <h3 class="font-semibold my-auto">KALAKKADU SANCTUARY</h3>
                 <!-- <p class="text-white">Discover lush wildlife, scenic trails, and serene landscapes in Tamil Nadu's
                   hidden gem, home to
@@ -777,39 +811,39 @@
           </div>
         </div>
         <div data-tab-content="tab2" class="hidden">
-          <h2 class="text-xl font-semibold mb-2">THOOTHUKUDI TOURIST SPOT</h2>
+          <!-- <h2 class="text-xl font-semibold mb-2">THOOTHUKUDI TOURIST SPOT</h2> -->
           <div class="tour-explore-container">
             <div class="grid 2xl:grid-cols-3 lg:grid-cols-3 grid-cols-1 gap-x-6 max-sm:gap-y-6">
               <div class="tour-item openBookingBtn cursor-pointer bg-[#004875]">
-                <div class="image-placeholder bg-[url('./images/place-07.jpg')]"></div>
+                <div class="image-placeholder bg-[url('./images/places/7.ManimutharDam.jpg')]"></div>
                 <h3 class="font-semibold my-auto">TIRUCHENDUR MURUGAN TEMPLE</h3>
                 <!-- <p class="text-white">One of the six Abodes of Murugan, located in Thoothukudi district.</p> -->
               </div>
               <div class="tour-item openBookingBtn cursor-pointer bg-[#004875]">
-                <div class="image-placeholder bg-[url('./images/place-08.jpg')]"></div>
+                <div class="image-placeholder bg-[url('./images/places/8.Ettayapuram.jpg')]"></div>
                 <h3 class="font-semibold my-auto">ETTAYAPURAM</h3>
                 <!-- <p class="text-white">Birthplace of the poet Subramania Bharathiyar, with historical and cultural sites.</p> -->
               </div>
               <div class="tour-item openBookingBtn cursor-pointer bg-[#004875]">
-                <div class="image-placeholder bg-[url('./images/place-09.jpg')]"></div>
+                <div class="image-placeholder bg-[url('./images/places/9.KazhugumalaiJainTemple.jpg')]"></div>
                 <h3 class="font-semibold my-auto">KAZHUGUMALAI JAIN TEMPLE</h3>
                 <!-- <p class="text-white">A significant Jain temple with intricate carvings</p> -->
               </div>
             </div>
             <div class="grid 2xl:grid-cols-3 lg:grid-cols-3 grid-cols-1 gap-x-6 max-sm:gap-y-6">
               <div class="tour-item openBookingBtn cursor-pointer bg-[#004875]">
-                <div class="image-placeholder bg-[url('./images/place-10.jpg')]"></div>
+                <div class="image-placeholder bg-[url('./images/places/10.PanimayaMathaChurch.jpg')]"></div>
                 <h3 class="font-semibold my-auto">PANIMAYA MATHA CHURCH</h3>
                 <!-- <p class="text-white">A historical church with Portuguese architectural influences.</p> -->
               </div>
               <div class="tour-item openBookingBtn cursor-pointer bg-[#004875]">
-                <div class="image-placeholder bg-[url('./images/place-11.jpg')]"></div>
+                <div class="image-placeholder bg-[url('./images/places/11.KulasaiMutharamman.jpg')]"></div>
                 <h3 class="font-semibold my-auto">KULASAI MUTHARAMMAN</h3>
                 <!-- <p class="text-white">The Mutharamman Temple is in Kulasekharapatnam near Thiruchendur in the
                   Thoothukudi district.</p> -->
               </div>
               <div class="tour-item openBookingBtn cursor-pointer bg-[#004875]">
-                <div class="image-placeholder bg-[url('./images/place-12.jpg')]"></div>
+                <div class="image-placeholder bg-[url('./images/places/12.Manapad.jpg')]"></div>
                 <h3 class="font-semibold my-auto">MANAPAD</h3>
                 <!-- <p class="text-white">Manapad is a quiet coastal village with scenic beaches, historic churches, and
                   safe waters perfect
@@ -820,28 +854,28 @@
           </div>
         </div>
         <div data-tab-content="tab3" class="hidden">
-          <h2 class="text-xl font-semibold mb-2">TENKASI TOURIST SPOT</h2>
+          <!-- <h2 class="text-xl font-semibold mb-2">TENKASI TOURIST SPOT</h2> -->
           <div class="tour-explore-container">
             <div class="grid 2xl:grid-cols-3 lg:grid-cols-3 grid-cols-1 gap-x-6 max-sm:gap-y-6">
               <div class="tour-item openBookingBtn cursor-pointer bg-[#004875]">
-                <div class="image-placeholder bg-[url('./images/place-13.jpg')]"></div>
+                <div class="image-placeholder bg-[url('./images/places/13.kaasiviswanathartemple.png')]"></div>
                 <h3 class="font-semibold my-auto">KASI VISHWANATHAR TEMPLE</h3>
                 <!-- <p class="text-white">A major temple known as the "Kasi (Varanasi) of the South," located in Tenkasi.</p> -->
               </div>
               <div class="tour-item openBookingBtn cursor-pointer bg-[#004875]">
-                <div class="image-placeholder bg-[url('./images/place-14.jpg')]"></div>
+                <div class="image-placeholder bg-[url('./images/places/14.KutraleeshwararTemple.jpg')]"></div>
                 <h3 class="font-semibold my-auto">KUTRALEESHWARAR TEMPLE (CHITRA SABHA)</h3>
                 <!-- <p class="text-white">A temple associated with Lord Nataraja and renowned for its architecture.</p> -->
               </div>
               <div class="tour-item openBookingBtn cursor-pointer bg-[#004875]">
-                <div class="image-placeholder bg-[url('./images/place-15.jpg')]"></div>
+                <div class="image-placeholder bg-[url('./images/places/15.KutralamFalls.jpg')]"></div>
                 <h3 class="font-semibold my-auto">KUTRALAM FALLS</h3>
                 <!-- <p class="text-white">A series of waterfalls, a popular destination for its natural beauty and cool climate.</p> -->
               </div>
             </div>
             <div class="grid 2xl:grid-cols-3 lg:grid-cols-3 grid-cols-1 gap-x-6 max-sm:gap-y-6">
               <div class="tour-item openBookingBtn cursor-pointer bg-[#004875]">
-                <div class="image-placeholder bg-[url('./images/place-16.jpg')]"></div>
+                <div class="image-placeholder bg-[url('./images/places/16.ThrillPark.jpg')]"></div>
                 <h3 class="font-semibold my-auto">THRILL PARK</h3>
                 <!-- <p class="text-white">A fun park with various adventure activities.</p> -->
               </div>
@@ -849,39 +883,39 @@
           </div>
         </div>
         <div data-tab-content="tab4" class="hidden">
-          <h2 class="text-xl font-semibold mb-2">KANNIYAKUMARI TOURIST SPOT</h2>
+          <!-- <h2 class="text-xl font-semibold mb-2">KANNIYAKUMARI TOURIST SPOT</h2> -->
           <div class="tour-explore-container">
             <div class="grid 2xl:grid-cols-3 lg:grid-cols-3 grid-cols-1 gap-x-6 max-sm:gap-y-6">
               <div class="tour-item openBookingBtn cursor-pointer bg-[#004875] flex flex-col">
-                <div class="image-placeholder bg-[url('./images/place-16.jpg')]"></div>
+                <div class="image-placeholder bg-[url('./images/places/17.VivekanandaRockMemorial.jpg')]"></div>
                 <h3 class="font-semibold my-auto">VIVEKANANDA ROCK MEMORIAL</h3>
                 <!-- <p class="text-white">A significant memorial located on a rocky island in the sea, offering stunning views.</p> -->
               </div>
               <div class="tour-item openBookingBtn cursor-pointer bg-[#004875] flex flex-col">
-                <div class="image-placeholder bg-[url('./images/place-17.jpg')]"></div>
+                <div class="image-placeholder bg-[url('./images/places/18.StatueofThiruvalluvar.jpg')]"></div>
                 <h3 class="font-semibold my-auto">STATUE OF THIRUVALLUVAR</h3>
                 <!-- <p class="text-white">A colossal statue of the renowned Tamil poet, located near the Vivekananda Rock Memorial.</p> -->
               </div>
               <div class="tour-item openBookingBtn cursor-pointer bg-[#004875] flex flex-col">
-                <div class="image-placeholder bg-[url('./images/place-18.jpg')]"></div>
+                <div class="image-placeholder bg-[url('./images/places/19.KanyakumariBeach.jpg')]"></div>
                 <h3 class="font-semibold my-auto">KANYAKUMARI BEACH</h3>
                 <!-- <p class="text-white">A scenic beach with stunning sunrises and sunsets at the meeting point of three oceans.</p> -->
               </div>
             </div>
             <div class="grid 2xl:grid-cols-3 lg:grid-cols-3 grid-cols-1 gap-x-6 max-sm:gap-y-6">
               <div class="tour-item openBookingBtn cursor-pointer bg-[#004875] flex flex-col">
-                <div class="image-placeholder bg-[url('./images/place-19.jpg')]"></div>
+                <div class="image-placeholder bg-[url('./images/places/20.BhagavathiAmmanTemple.jpg')]"></div>
                 <h3 class="font-semibold my-auto">BHAGAVATHI AMMAN TEMPLE</h3>
                 <!-- <p class="text-white">A prominent Hindu temple dedicated to Goddess Kanniyakumari Amman.</p> -->
               </div>
               <div class="tour-item openBookingBtn cursor-pointer bg-[#004875] flex flex-col">
-                <div class="image-placeholder bg-[url('./images/place-20.jpg')]"></div>
+                <div class="image-placeholder bg-[url('./images/places/21.Pechiparai.jpg')]"></div>
                 <h3 class="font-semibold my-auto">PECHIPARAI</h3>
                 <!-- <p class="text-white">The largest dam in Kanyakumari district, is located in the Western Ghats, 43 km
                   from Nagercoil.</p> -->
               </div>
               <div class="tour-item openBookingBtn cursor-pointer bg-[#004875] flex flex-col">
-                <div class="image-placeholder bg-[url('./images/place-21.jpg')]"></div>
+                <div class="image-placeholder bg-[url('./images/places/22.SanguthuraiBeach.jpg')]"></div>
                 <h3 class="font-semibold my-auto">SANGUTHURAI BEACH</h3>
                 <!-- <p class="text-white">A beautiful beach known for its scenic beauty and calm waters.</p> -->
               </div>
@@ -889,29 +923,29 @@
           </div>
         </div>
         <div data-tab-content="tab5" class="hidden">
-          <h2 class="text-xl font-semibold mb-2">MADURAI TOURIST SPOT</h2>
+          <!-- <h2 class="text-xl font-semibold mb-2">MADURAI TOURIST SPOT</h2> -->
           <div class="tour-explore-container">
             <div class="grid 2xl:grid-cols-3 lg:grid-cols-3 grid-cols-1 gap-x-6 max-sm:gap-y-6">
               <div class="tour-item openBookingBtn cursor-pointer bg-[#004875] flex flex-col">
-                <div class="image-placeholder bg-[url('./images/place-22.jpg')]"></div>
+                <div class="image-placeholder bg-[url('./images/places/23.SriMeenakshiSundareshwarartemple.jpg')]"></div>
                 <h3 class="font-semibold my-auto">SRI MEENAKSHI SUNDARESWARAR TEMPLE</h3>
                 <!-- <p class="text-white">A famous temple in Tamil Nadu, known for its intricate architecture and religious
                   significance.</p> -->
               </div>
               <div class="tour-item openBookingBtn cursor-pointer bg-[#004875] flex flex-col">
-                <div class="image-placeholder bg-[url('./images/place-23.jpg')]"></div>
+                <div class="image-placeholder bg-[url('./images/places/24.AzhagarKovil.jpg')]"></div>
                 <h3 class="font-semibold my-auto">AZHAGAR KOVIL</h3>
                 <!-- <p class="text-white">A Vishnu temple dedicated to Lord Alagar, located northeast of Madurai.</p> -->
               </div>
               <div class="tour-item openBookingBtn cursor-pointer bg-[#004875] flex flex-col">
-                <div class="image-placeholder bg-[url('./images/place-24.jpg')]"></div>
+                <div class="image-placeholder bg-[url('./images/places/25.ThirumalaiNayakPalace.jpg')]"></div>
                 <h3 class="font-semibold my-auto">THIRUMALAI NAYAK PALACE</h3>
                 <!-- <p class="text-white">A historical landmark showcasing Indo-Saracenic architecture.</p> -->
               </div>
             </div>
             <div class="grid 2xl:grid-cols-3 lg:grid-cols-3 grid-cols-1 gap-x-6 max-sm:gap-y-6">
               <div class="tour-item openBookingBtn cursor-pointer bg-[#004875] flex flex-col">
-                <div class="image-placeholder bg-[url('./images/place-25.jpg')]"></div>
+                <div class="image-placeholder bg-[url('./images/places/26.GandhiMuseum.jpg')]"></div>
                 <h3 class="font-semibold my-auto">GANDHI MUSEUM</h3>
                 <!-- <p class="text-white">Located in the old palace of Rani Mangammal, it showcases Gandhi's life and work.</p> -->
               </div>
@@ -919,38 +953,38 @@
           </div>
         </div>
         <div data-tab-content="tab6" class="hidden">
-          <h2 class="text-xl font-semibold mb-2">VIRUDHUNAGAR TOURIST SPOT</h2>
+          <!-- <h2 class="text-xl font-semibold mb-2">VIRUDHUNAGAR TOURIST SPOT</h2> -->
           <div class="tour-explore-container">
             <div class="grid 2xl:grid-cols-3 lg:grid-cols-3 grid-cols-1 gap-x-6 max-sm:gap-y-6">
               <div class="tour-item openBookingBtn cursor-pointer bg-[#004875] flex flex-col">
-                <div class="image-placeholder bg-[url('./images/place-26.jpg')]"></div>
+                <div class="image-placeholder bg-[url('./images/places/27.IrukkankudiMarriammanTemple.jpg')]"></div>
                 <h3 class="font-semibold my-auto">IRUKKANKUDI MARRIAMMAN TEMPLE</h3>
                 <!-- <p class="text-white">A temple located between the Arjuna and Vaipparu rivers.</p> -->
               </div>
               <div class="tour-item openBookingBtn cursor-pointer bg-[#004875] flex flex-col">
-                <div class="image-placeholder bg-[url('./images/place-27.jpg')]"></div>
+                <div class="image-placeholder bg-[url('./images/places/28.SanjeeviMalai.jpg')]"></div>
                 <h3 class="font-semibold my-auto">SANJEEVI MALAI</h3>
                 <!-- <p class="text-white">A significant hill with historical and religious importance, located in Rajapalayam.</p> -->
               </div>
               <div class="tour-item openBookingBtn cursor-pointer bg-[#004875] flex flex-col">
-                <div class="image-placeholder bg-[url('./images/place-28.jpg')]"></div>
+                <div class="image-placeholder bg-[url('./images/places/29.SathuragiriShivaTemple.jpg')]"></div>
                 <h3 class="font-semibold my-auto">SATHURAGIRI SHIVA TEMPLE & FALLS</h3>
                 <!-- <p class="text-white">A revered religious site and A popular waterfall destination.</p> -->
               </div>
             </div>
             <div class="grid 2xl:grid-cols-3 lg:grid-cols-3 grid-cols-1 gap-x-6 max-sm:gap-y-6">
               <div class="tour-item openBookingBtn cursor-pointer bg-[#004875] flex flex-col">
-                <div class="image-placeholder bg-[url('./images/place-29.jpg')]"></div>
+                <div class="image-placeholder bg-[url('./images/places/30.AndalRengaMannarTemple.jpg')]"></div>
                 <h3 class="font-semibold my-auto">ANDAL RENGA MANNAR TEMPLE</h3>
                 <!-- <p class="text-white">Important religious site.</p> -->
               </div>
               <div class="tour-item openBookingBtn cursor-pointer bg-[#004875] flex flex-col">
-                <div class="image-placeholder bg-[url('./images/place-30.jpg')]"></div>
+                <div class="image-placeholder bg-[url('./images/places/31.KeniFalls&KottamalaiFalls.jpg')]"></div>
                 <h3 class="font-semibold my-auto">KENI FALLS & KOTTAMALAI FALLS</h3>
                 <!-- <p class="text-white">A natural waterfall attracting visitors.</p> -->
               </div>
               <div class="tour-item openBookingBtn cursor-pointer bg-[#004875] flex flex-col">
-                <div class="image-placeholder bg-[url('./images/place-31.jpg')]"></div>
+                <div class="image-placeholder bg-[url('./images/places/32.Grizzledsquirrelwildlifesanctuary.jpg')]"></div>
                 <h3 class="font-semibold my-auto">GRIZZLED SQUIRREL WILDLIFE SANCTUARY</h3>
                 <!-- <p class="text-white">A place for nature lovers and wildlife enthusiasts.</p> -->
               </div>
@@ -1402,6 +1436,42 @@
   <script>
     AOS.init();
   </script>
+  <!-- FONT-ANIMATION -->
+  <script>
+    // var textWrapper = document.querySelector('.ml10 .letters');
+    // textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+    // anime.timeline({loop: false})
+    //   .add({
+    //     targets: '.ml10 .letter',
+    //     rotateY: [-90, 0],
+    //     duration: 1300,
+    //     delay: (el, i) => 45 * i
+    //   }).add({
+    //     targets: '.ml10',
+    //     opacity: 1,
+    //     duration: 1000,
+    //     easing: "easeOutExpo",
+    //     delay: 1000
+    //   });
+
+    var textWrapper = document.querySelector('.ml10 .letters');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S+/g, "<span class='word'>$&</span>");
+
+anime.timeline({ loop: false })
+  .add({
+    targets: '.ml10 .word',
+    rotateY: [-90, 0],
+    duration: 1000,
+    delay: (el, i) => 100 * i
+  }).add({
+    targets: '.ml10',
+    opacity: 1,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+  </script>
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
@@ -1499,7 +1569,7 @@
         margin: 10,
         nav: false,
         dots: true,
-        autoplay: true,
+        autoplay: false,
         responsiveClass: true,
         responsive: {
           0: { items: 1, nav: true },
