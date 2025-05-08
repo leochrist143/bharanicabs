@@ -28,6 +28,15 @@ document.addEventListener('DOMContentLoaded', function() {
       }, DEBOUNCE_DELAY);
     });
 
+      // Mobile-friendly touch handling
+      suggestions.addEventListener('touchstart', function(e) {
+        e.stopPropagation(); // Prevent document click from hiding suggestions
+      }, { passive: true });
+  
+      suggestions.addEventListener('touchmove', function(e) {
+        e.stopPropagation(); // Allow scrolling without closing dropdown
+      }, { passive: true });
+
     // Hide suggestions when clicking outside
     document.addEventListener('click', function(e) {
       if (!input.contains(e.target) && !suggestions.contains(e.target)) {
