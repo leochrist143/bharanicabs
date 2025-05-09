@@ -63,11 +63,11 @@ document.addEventListener('DOMContentLoaded', function() {
       }
 
       data.forEach(item => {
-        const suggestion = document.createElement('div');
-        suggestion.className = 'p-2 hover:bg-gray-100 cursor-pointer border-b border-gray-100';
+        const suggestion = document.createElement('li');
+        suggestion.className = 'location-list p-2 hover:bg-gray-100 cursor-pointer border-b border-gray-100';
         
         // Format display text for Tamil Nadu locations
-        // let displayText = item.display_name;
+         let displayText = item.display_name;
         // if (item.address) {
         //   displayText = [
         //     item.address.road,

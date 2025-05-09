@@ -51,6 +51,10 @@
     
 }
 
+.location-list{
+    list-style: none;
+}
+
 .suggestions {
     -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
     overscroll-behavior: contain; /* Prevent scroll chaining */
